@@ -1,0 +1,38 @@
+\usepackage[perpage,bottom,hang]{footmisc} % 页脚脚注
+\usepackage{xcolor} % 颜色
+\usepackage{booktabs} % 表格
+\usepackage{longtable} % 多页表格
+\usepackage{threeparttable} % 三段表格
+\usepackage{threeparttablex} % 三段表格
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e} % 算法
+\usepackage{listings} % 代码高亮
+\lstdefinestyle{lstStyleCode}{%
+    aboveskip         = \medskipamount, % 上间距
+    belowskip         = \medskipamount, % 下间距
+    basicstyle        = \ttfamily\zihao{5}, % 基本字体
+    commentstyle      = \color{black!60}, % 注释字体
+    stringstyle       = \color{green!40!black!100}, % 字符串字体
+    keywordstyle      = \bfseries\color{blue!50!black}, % 关键字字体
+    extendedchars     = false, % 扩展字符
+    upquote           = true, % 反引号
+    tabsize           = 4, % tab大小
+    showstringspaces  = false, % 显示字符串空格
+    xleftmargin       = 1em, % 左间距
+    xrightmargin      = 1em, % 右间距
+    breaklines        = true, % 自动换行
+    framexleftmargin  = 1em, % 左边框间距
+    framexrightmargin = 1em, % 右边框间距
+    backgroundcolor   = \color{gray!10}, % 背景颜色
+    columns           = flexible, % 列格式
+    keepspaces        = true, % 保留空格
+    texcl             = true, % 允许使用tex命令
+    mathescape        = true, % 数学模式
+}
+\lstnewenvironment{codeblock}[1][]{%
+    \lstset{style=lstStyleCode,#1}}{}
+\usepackage[colorlinks,linkcolor=black,urlcolor=blue]{hyperref} % 超链接
+
+\usepackage{anyfontsize} % 字体大小
+\renewcommand\normalsize{\fontsize{12pt}{18pt}\selectfont}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}  % 设置主字体为Times New Roman

@@ -1,0 +1,80 @@
+\chapter{任务目标}
+
+本次课程设计的任务是基于谣言检测数据集，构建一个检测模型。
+该模型可以对数据集中的推文进行谣言检测与识别。要求如下：
+\begin{itemize}
+    \item 数据集：使用给定的谣言检测数据集，数据集包含推文文本和标签（谣言或非谣言）。
+    \item 训练模型：使用逻辑回归或GRU等深度学习模型进行谣言检测，实现二分类任务，
+    用0代表非谣言、1代表谣言
+    \item 泛化能力：模型应具有较好的泛化能力，能够适应不同类型的谣言检测任务。
+    \item 评估指标：分类准确率、运行时间等
+    \item 结果可视化：对模型训练结果进行可视化展示。
+\end{itemize}
+
+\vspace{1em}
+
+我们需要在接口类文件classify.py中实现接口类RumourDetectClass，
+该类对外提供一个接口函数classify，该函数接收一条字符串作为输入，
+输出一个int值作为对应的预测类别。该类龚包含以下方法：
+\begin{itemize}
+    \item \texttt{\_\_init\_\_(self)}: 初始化类
+\end{itemize}
+
+\chapter{具体内容}
+
+\section{实施方案}
+
+
+\section{核心代码分析}
+
+\begin{codeblock}[language=Python]
+import re
+from train_gru import *
+
+class RumourDetectClass:
+    def __init__(self):
+        # 加载词表和模型参数
+        self.vocab = build_vocab(pd.read_csv('../dataset/split/train.csv')['text'])
+        self.model = BiGRU(len(self.vocab), EMBEDDING_DIM, HIDDEN_DIM).to(DEVICE)
+        self.model.load_state_dict(torch.load('../Output/bigru.pt', map_location=DEVICE))
+        self.model.eval()
+
+    def preprocess(self, text):
+        # 文本预处理（与训练时一致）
+        text = re.sub(r'[^\w\s]', '', text.lower())
+        return text
+    
+    def classify(self, text: str) -> int:
+        # 预测流程
+        text = self.preprocess(text)
+        ids = encode(text, self.vocab)
+        x = torch.tensor([ids], dtype=torch.long).to(DEVICE)
+        with torch.no_grad():
+            logits = self.model(x)
+            pred = (torch.sigmoid(logits) > 0.5).float().item()
+        return int(pred)
+\end{codeblock}
+
+
+\section{测试结果分析}
+
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=4cm]{example-image.pdf}
+  \caption{示例图片}
+  \label{fig:example}
+\end{figure}
+
+
+
+
+\chapter{工作总结}
+
+\section{收获与心得}
+
+
+
+\section{遇到问题及解决思路}
+
+\chapter{课程建议}
