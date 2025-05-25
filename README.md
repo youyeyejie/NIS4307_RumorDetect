@@ -40,7 +40,14 @@ TODO
 - [李卓恒](mailto:lzhsj32206@sjtu.edu.cn)
 - [刘梓芃](mailto:liuzipeng@sjtu.edu.cn)
 - [聂鸣涛](mailto:niemingtao@sjtu.edu.cn)
-```
-TODO
-```
 
+
+## TODO
+
+## Todo
+- [ ] classify.py `lzp`
+- [ ] 优化train_gru `nmt`
+    - [ ] 超过MAX_LEN的文本处理：以固定步长（如 MAX_LEN/2）滑动窗口，每个块包含连续的 MAX_LEN 个 token？
+    - [ ] 调参
+- [ ] 数据集 `lzh`
+- [ ] report `myz`
