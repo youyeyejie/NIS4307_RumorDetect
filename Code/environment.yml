@@ -62,7 +62,6 @@ dependencies:
   - openssl=1.1.1w=h2bbff1b_0
   - packaging=24.1=py38haa95532_0
   - pandas=1.5.3=py38hf11a4ad_0
-  - pillow=9.3.0=py38hdc2b20a_1
   - pip=24.2=py38haa95532_0
   - platformdirs=3.10.0=py38haa95532_0
   - pooch=1.7.0=py38haa95532_0
@@ -102,4 +101,6 @@ dependencies:
   - zipp=3.20.2=py38haa95532_0
   - zlib=1.2.13=hcfcfb64_4
   - zstd=1.5.2=h12be248_6
+  - pip:
+      - pillow==10.4.0
 prefix: D:\Miniconda3\envs\NIS4307

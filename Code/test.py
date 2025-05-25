@@ -1,11 +1,16 @@
 import pandas as pd
 from classify import RumourDetectClass  # 假设接口类文件为classify.py，与当前脚本同目录
 
+model_path = '../Output/Model/embedding_100_hidden_128_epoch_10.pt'
+test_path = '../Dataset/test/test.csv'
+predict_path = test_path.replace('.csv', '_predictions.csv')
+expected_path = test_path.replace('.csv', '_expected.csv')
+
 # 初始化接口实例
-detector = RumourDetectClass()
+detector = RumourDetectClass(model_path)
 
 # 读取测试数据（假设test.csv包含'text'列）
-test_data = pd.read_csv('../Dataset/test/test.csv')
+test_data = pd.read_csv(test_path)
 test_texts = test_data['text'].tolist()
 
 # 批量预测
@@ -17,10 +22,10 @@ for text in test_texts:
 
 # 保存结果到DataFrame
 test_data['pred_label'] = predictions
-test_data.to_csv('../Dataset/test/test_predictions.csv', index=False)
-print("预测完成，结果已保存至test_predictions.csv")
+test_data.to_csv(predict_path, index=False)
+print(f"预测完成，结果已保存至{predict_path}")
 
-expected = pd.read_csv('../Dataset/test/test_expected.csv')
+expected = pd.read_csv(expected_path)
 total = len(expected)
 correct = (test_data['pred_label'] == expected['label']).sum()
 accuracy = correct / total

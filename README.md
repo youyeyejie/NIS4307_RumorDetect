@@ -11,7 +11,9 @@ rumour_detector/
 │   ├── split/          # 训练集、验证集
 │   └── test/           # 测试集
 ├── Docs/               # 项目文档
-├── Output/             # 模型
+├── Output/             # 输出
+│   ├── Graph/          # 图表
+│   └── Model/          # 模型
 ├── Report/             # 项目报告
 ├── environment.yml     # Conda 环境配置文件
 └── README.md           # 项目说明文件

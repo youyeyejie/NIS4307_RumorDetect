@@ -1,0 +1,12 @@
+\contentsline {chapter}{\numberline {第 1 章}任务目标}{2}{chapter.1}%
+\contentsline {chapter}{\numberline {第 2 章}具体内容}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}实施方案}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}核心代码分析}{3}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}训练模型train\_gru.py}{3}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}接口类classify.py}{4}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}测试结果分析}{5}{section.2.3}%
+\contentsline {chapter}{\numberline {第 3 章}工作总结}{6}{chapter.3}%
+\contentsline {section}{\numberline {3.1}收获与心得}{6}{section.3.1}%
+\contentsline {section}{\numberline {3.2}遇到问题及解决思路}{6}{section.3.2}%
+\contentsline {chapter}{\numberline {第 4 章}课程建议}{7}{chapter.4}%
+\contentsfinish 
