@@ -37,6 +37,9 @@ TODO
 
 ## Contributors
 - [马悦钊](mailto:ma_yuezhao@sjtu.edu.cn)
+- [李卓恒](mailto:lzhsj32206@sjtu.edu.cn)
+- [刘梓芃](mailto:liuzipeng@sjtu.edu.cn)
+- [聂鸣涛](mailto:niemingtao@sjtu.edu.cn)
 ```
 TODO
 ```
