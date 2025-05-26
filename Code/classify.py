@@ -1,5 +1,4 @@
 import torch
-import re
 from train_gru import *
 
 class RumourDetectClass:
@@ -12,7 +11,6 @@ class RumourDetectClass:
 
     def preprocess(self, text):
         # 文本预处理（与训练时一致）
-        text = tokenize(text)
         ids = encode(text, self.vocab)
         return ids
     

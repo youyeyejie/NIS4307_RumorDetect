@@ -7,14 +7,21 @@ from collections import Counter
 import re
 import joblib
 import matplotlib.pyplot as plt
+from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix, classification_report
+import numpy as np
+
+# 设置随机种子确保结果可复现
+torch.manual_seed(42)
+np.random.seed(42)
 
 # 超参数设置
-BATCH_SIZE = 32 # 批大小
-EMBEDDING_DIM = 100 # 嵌入维度
-HIDDEN_DIM = 128 # 隐藏层维度
-EPOCHS = 10 # 训练轮数
-MAX_LEN = 64 # 文本最大长度
-DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu') # 设备选择
+BATCH_SIZE = 32         # 批大小
+EMBEDDING_DIM = 100     # 嵌入维度
+HIDDEN_DIM = 128        # 隐藏层维度
+EPOCHS = 10             # 训练轮数
+MAX_LEN = 64            # 文本最大长度
+LEARNING_RATE = 1e-3    # 学习率
+DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')  # 设备选择
 
 model_parameter = f'embedding_{EMBEDDING_DIM}_hidden_{HIDDEN_DIM}_epoch_{EPOCHS}'
 model_path = f'../Output/Model/{model_parameter}.pt'
@@ -59,7 +66,7 @@ class RumorDataset(Dataset):
 
     def __len__(self):
         return len(self.texts)
-    
+
     def __getitem__(self, idx):
         x = torch.tensor(encode(self.texts[idx], self.vocab), dtype=torch.long)
         y = torch.tensor(self.labels[idx], dtype=torch.float)
@@ -82,45 +89,107 @@ class BiGRU(nn.Module):
         return out.squeeze(1)
 
 def evaluate(model, loader):
-    # 评估函数，返回准确率
+    # 评估函数，返回准确率、精确率、召回率和F1分数
     model.eval()
-    correct, total = 0, 0
+    all_preds = []
+    all_labels = []
+    epoch_loss = 0
     with torch.no_grad():
         for x, y in loader:
             x, y = x.to(DEVICE), y.to(DEVICE)
             logits = model(x)
+            loss = nn.BCEWithLogitsLoss()(logits, y)
+            epoch_loss += loss.item()
             preds = (torch.sigmoid(logits) > 0.5).float()
-            correct += (preds == y).sum().item()
-            total += y.size(0)
-    return correct / total
+            all_preds.extend(preds.cpu().numpy())
+            all_labels.extend(y.cpu().numpy())
+        avg_loss = epoch_loss / len(loader)
+    
+    # 计算各项指标
+    accuracy = (np.array(all_preds) == np.array(all_labels)).mean()
+    precision = precision_score(all_labels, all_preds, zero_division=0)
+    recall = recall_score(all_labels, all_preds, zero_division=0)
+    f1 = f1_score(all_labels, all_preds, zero_division=0)
+    
+    return accuracy, precision, recall, f1, avg_loss
+
+def plot_learning_curve(train_metrics, val_metrics, epochs, save_path):
+    """绘制包含损失率和核心指标的双图学习曲线"""
+    plt.figure(figsize=(16, 8))
+    plt.suptitle(f'BiGRU - {model_parameter}', fontsize=16, y=0.95)  # 调整总标题位置
+
+    # 子图1：损失率曲线（训练集/验证集）
+    plt.subplot(1, 2, 1)
+    plt.plot(range(1, epochs+1), train_metrics['loss'], marker='o', color='blue', linestyle='-', label='Training Loss')
+    plt.plot(range(1, epochs+1), val_metrics['loss'], marker='s', color='orange', linestyle='--', label='Validation Loss')
+    plt.title('Loss Curves')
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss')
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.ylim(bottom=0)  # 限制y轴下限为0，突出损失变化趋势
+    
+    # 子图2：准确率、精确率、召回率、F1分数曲线
+    plt.subplot(1, 2, 2)
+    plt.plot(range(1, epochs+1), train_metrics['accuracy'], marker='o', color='green', linestyle='-', label='Training Accuracy')
+    plt.plot(range(1, epochs+1), val_metrics['accuracy'], marker='s', color='lightgreen', linestyle='--', label='Validation Accuracy')
+    plt.plot(range(1, epochs+1), train_metrics['precision'], marker='o', color='red', linestyle='-', label='Training Precision')
+    plt.plot(range(1, epochs+1), val_metrics['precision'], marker='s', color='pink', linestyle='--', label='Validation Precision')
+    plt.plot(range(1, epochs+1), train_metrics['recall'], marker='o', color='purple', linestyle='-', label='Training Recall')
+    plt.plot(range(1, epochs+1), val_metrics['recall'], marker='s', color='violet', linestyle='--', label='Validation Recall')
+    plt.plot(range(1, epochs+1), train_metrics['f1'], marker='o', color='black', linestyle='-', label='Training F1')
+    plt.plot(range(1, epochs+1), val_metrics['f1'], marker='s', color='gray', linestyle='--', label='Validation F1')
+    
+    plt.title('Accuracy/Precision/Recall/F1 Curves')
+    plt.xlabel('Epoch')
+    plt.ylabel('Score')
+    plt.legend(ncol=2, loc='upper right')  # 双列图例，避免遮挡曲线
+    plt.grid(True, linestyle='--', alpha=0.7)
+    
+    plt.tight_layout(pad=3)  # 调整子图间距
+    plt.savefig(save_path, dpi=300)  # 保存高分辨率图片
+    print(f'学习曲线图表已保存至: {save_path}')
 
 def main():
     # 读取数据集
+    print("正在加载数据...")
     train_df = pd.read_csv(train_path)
     val_df = pd.read_csv(val_path)
 
     # 构建词表
+    print("正在构建词表...")
     vocab = build_vocab(train_df['text'])
     joblib.dump(vocab, vocab_path)  # 保存词表
+    
     # 构建数据集
     train_set = RumorDataset(train_df, vocab)
     val_set = RumorDataset(val_df, vocab)
 
     train_loader = DataLoader(train_set, batch_size=BATCH_SIZE, shuffle=True)
     val_loader = DataLoader(val_set, batch_size=BATCH_SIZE)
+
     # 初始化模型、优化器和损失函数
+    print("正在初始化模型...")
     model = BiGRU(len(vocab), EMBEDDING_DIM, HIDDEN_DIM).to(DEVICE)
-    optimizer = optim.Adam(model.parameters(), lr=1e-3)
+    optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
     criterion = nn.BCEWithLogitsLoss()
 
-    train_losses = []
-    val_accuracies = []
+    # 记录训练过程指标
+    train_history = {
+        'loss': [], 'accuracy': [], 'precision': [], 'recall': [], 'f1': []
+    }
+    val_history = {
+        'loss': [], 'accuracy': [], 'precision': [], 'recall': [], 'f1': []
+    }
 
+    print("开始训练模型...")
     # 训练模型
+    best_val_f1 = 0.0
     for epoch in range(EPOCHS):
         model.train()
         epoch_loss = 0
-        batch_count = 0
+        
+        # 训练一个epoch
         for x, y in train_loader:
             x, y = x.to(DEVICE), y.to(DEVICE)
             logits = model(x)
@@ -129,35 +198,39 @@ def main():
             loss.backward()
             optimizer.step()
             epoch_loss += loss.item()
-            batch_count += 1
-        avg_loss = epoch_loss / batch_count
-        train_losses.append(avg_loss)
-        val_acc = evaluate(model, val_loader)
-        val_accuracies.append(val_acc)
-        print(f'Epoch {epoch+1}, Loss: {avg_loss:.4f}, Val Acc: {val_acc:.4f}')
-
-    # 绘制训练损失和验证准确率曲线
-    plt.figure(figsize=(10,4))
-    plt.suptitle(f'Parameter: {model_parameter}', fontsize=16)
-    plt.subplot(1,2,1)
-    plt.plot(range(1, EPOCHS+1), train_losses, marker='o')
-    plt.title('Training Loss')
-    plt.xlabel('Epoch')
-    plt.ylabel('Loss')
-
-    plt.subplot(1,2,2)
-    plt.plot(range(1, EPOCHS+1), val_accuracies, marker='o', color='orange')
-    plt.title('Validation Accuracy')
-    plt.xlabel('Epoch')
-    plt.ylabel('Accuracy')
-
-    plt.tight_layout(rect=[0, 0.03, 1, 0.95])  # 避免总标题和子图重叠
-    plt.savefig(graph_path)
-    # plt.show()
         
-    # 保存模型checkpoint
-    torch.save(model.state_dict(), model_path)
-    print(f'模型已保存为{model_parameter}.pt')
+        avg_loss = epoch_loss / len(train_loader)
 
+        # 计算训练集指标
+        train_acc, train_prec, train_rec, train_f1, _ = evaluate(model, train_loader)
+        train_history['accuracy'].append(train_acc)
+        train_history['precision'].append(train_prec)
+        train_history['recall'].append(train_rec)
+        train_history['f1'].append(train_f1)
+        train_history['loss'].append(avg_loss)
+
+        val_acc, val_prec, val_rec, val_f1, val_loss = evaluate(model, val_loader)
+        val_history['accuracy'].append(val_acc)
+        val_history['precision'].append(val_prec)
+        val_history['recall'].append(val_rec)
+        val_history['f1'].append(val_f1)
+        val_history['loss'].append(val_loss)
+
+        print(f'Epoch {epoch+1}/{EPOCHS}')
+        # 保存最佳模型
+        if val_f1 > best_val_f1:
+            best_val_f1 = val_f1
+            torch.save(model.state_dict(), model_path)
+            print(f'已保存最佳模型 (验证集F1: {val_f1:.4f})')
+        
+        print(f'训练集: Loss={avg_loss:.4f}, Acc={train_acc:.4f}, Prec={train_prec:.4f}, Rec={train_rec:.4f}, F1={train_f1:.4f}')
+        print(f'验证集: Loss={val_loss:.4f}, Acc={val_acc:.4f}, Prec={val_prec:.4f}, Rec={val_rec:.4f}, F1={val_f1:.4f}')
+        print('-' * 60)
+    
+    print("\n训练完成!")
+    
+    # 绘制学习曲线
+    plot_learning_curve(train_history, val_history, EPOCHS, graph_path)
+    
 if __name__ == '__main__':
-    main() 
+    main()
