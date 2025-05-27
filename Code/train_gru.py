@@ -132,18 +132,18 @@ def plot_learning_curve(train_metrics, val_metrics, epochs, save_path):
     # 子图2：准确率、精确率、召回率、F1分数曲线
     plt.subplot(1, 2, 2)
     plt.plot(range(1, epochs+1), train_metrics['accuracy'], marker='o', color='green', linestyle='-', label='Training Accuracy')
-    plt.plot(range(1, epochs+1), val_metrics['accuracy'], marker='s', color='lightgreen', linestyle='--', label='Validation Accuracy')
     plt.plot(range(1, epochs+1), train_metrics['precision'], marker='o', color='red', linestyle='-', label='Training Precision')
-    plt.plot(range(1, epochs+1), val_metrics['precision'], marker='s', color='pink', linestyle='--', label='Validation Precision')
     plt.plot(range(1, epochs+1), train_metrics['recall'], marker='o', color='purple', linestyle='-', label='Training Recall')
-    plt.plot(range(1, epochs+1), val_metrics['recall'], marker='s', color='violet', linestyle='--', label='Validation Recall')
     plt.plot(range(1, epochs+1), train_metrics['f1'], marker='o', color='black', linestyle='-', label='Training F1')
+    plt.plot(range(1, epochs+1), val_metrics['accuracy'], marker='s', color='lightgreen', linestyle='--', label='Validation Accuracy')
+    plt.plot(range(1, epochs+1), val_metrics['precision'], marker='s', color='pink', linestyle='--', label='Validation Precision')
+    plt.plot(range(1, epochs+1), val_metrics['recall'], marker='s', color='violet', linestyle='--', label='Validation Recall')
     plt.plot(range(1, epochs+1), val_metrics['f1'], marker='s', color='gray', linestyle='--', label='Validation F1')
     
     plt.title('Accuracy/Precision/Recall/F1 Curves')
     plt.xlabel('Epoch')
     plt.ylabel('Score')
-    plt.legend(ncol=2, loc='upper right')  # 双列图例，避免遮挡曲线
+    plt.legend(ncol=2, loc='lower right')  # 双列图例，移动到右下角
     plt.grid(True, linestyle='--', alpha=0.7)
     
     plt.tight_layout(pad=3)  # 调整子图间距
