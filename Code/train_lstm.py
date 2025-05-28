@@ -9,6 +9,8 @@ import joblib
 import matplotlib.pyplot as plt
 from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix, classification_report
 import numpy as np
+from nltk.tokenize import word_tokenize
+from nltk.stem import PorterStemmer
 
 # 设置随机种子确保结果可复现
 torch.manual_seed(42)
@@ -32,8 +34,18 @@ test_path = '../dataset/test/test.csv'
 graph_path = f'../Output/Graph/{model_parameter}.png'
 
 # 简单分词器
+# def tokenize(text):
+#     return re.findall(r'\w+', text.lower())
+
 def tokenize(text):
-    return re.findall(r'\w+', text.lower())
+    # 处理URL和@提及
+    text = re.sub(r'http\S+', '<URL>', text)
+    text = re.sub(r'@\w+', '@USER', text)
+    
+    # 使用NLTK分词+词干提取
+    tokens = word_tokenize(text)
+    stemmer = PorterStemmer()
+    return [stemmer.stem(w.lower()) for w in tokens if w.isalpha()]
 
 # 构建词表
 def build_vocab(texts, min_freq=2):
