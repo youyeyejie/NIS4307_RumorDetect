@@ -5,7 +5,7 @@ class RumourDetectClass:
     def __init__(self, model_path):
         # 加载词表和模型参数
         self.vocab = joblib.load(vocab_path)
-        self.model = BiGRU(len(self.vocab), EMBEDDING_DIM, HIDDEN_DIM).to(DEVICE)
+        self.model = AdvancedBiLSTM(len(self.vocab), EMBEDDING_DIM, HIDDEN_DIM).to(DEVICE)
         self.model.load_state_dict(torch.load(model_path, map_location=DEVICE))
         self.model.eval()
 
