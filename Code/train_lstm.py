@@ -204,7 +204,7 @@ def evaluate(model, loader):
 def plot_learning_curve(train_metrics, val_metrics, epochs, save_path):
     """绘制包含损失率和核心指标的双图学习曲线"""
     plt.figure(figsize=(16, 8))
-    plt.suptitle(f'BiGRU - {model_parameter}', fontsize=16, y=0.95)  # 调整总标题位置
+    plt.suptitle(f'BiLSTM - {model_parameter}', fontsize=16, y=0.95)  # 调整总标题位置
 
     # 子图1：损失率曲线（训练集/验证集）
     plt.subplot(1, 2, 1)

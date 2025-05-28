@@ -1,7 +1,8 @@
 import pandas as pd
 from classify import RumourDetectClass  # 假设接口类文件为classify.py，与当前脚本同目录
+from train_lstm import *
 
-model_path = '../Output/Model/embedding_100_hidden_128_epoch_20.pt'
+model_path = f'../Output/Model/embedding_{EMBEDDING_DIM}_hidden_{HIDDEN_DIM}_epoch_{EPOCHS}.pt'
 test_path = '../Dataset/test/test.csv'
 predict_path = test_path.replace('.csv', '_predictions.csv')
 expected_path = test_path.replace('.csv', '_expected.csv')

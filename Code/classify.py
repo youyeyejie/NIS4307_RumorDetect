@@ -1,5 +1,5 @@
 import torch
-from train_gru import *
+from train_lstm import *
 
 class RumourDetectClass:
     def __init__(self, model_path):
