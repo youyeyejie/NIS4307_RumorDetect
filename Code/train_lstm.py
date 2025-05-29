@@ -19,11 +19,11 @@ np.random.seed(42)
 
 # 超参数设置
 BATCH_SIZE = 32         # 批大小
-EMBEDDING_DIM = 128     # 嵌入维度
-HIDDEN_DIM = 256        # 隐藏层维度
-EPOCHS = 30             # 训练轮数
+EMBEDDING_DIM = 128     # 嵌入维度(可修改)
+HIDDEN_DIM = 256        # 隐藏层维度(可修改)
+EPOCHS = 30             # 训练轮数(可修改)
 MAX_LEN = 64            # 文本最大长度
-LEARNING_RATE = 1.2e-2    # 学习率
+LEARNING_RATE = 1.2e-2    # 学习率(可修改)
 FACTOR = 0.9            # 学习率衰减因子
 WEIGHT_DECAY = 1e-4     # L2正则化
 DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')  # 设备选择
