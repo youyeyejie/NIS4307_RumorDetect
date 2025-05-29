@@ -18,19 +18,19 @@ np.random.seed(42)
 
 # 超参数设置
 BATCH_SIZE = 32         # 批大小
-EMBEDDING_DIM = 100     # 嵌入维度
-HIDDEN_DIM = 128        # 隐藏层维度
+EMBEDDING_DIM = 128     # 嵌入维度
+HIDDEN_DIM = 256        # 隐藏层维度
 EPOCHS = 20             # 训练轮数
 MAX_LEN = 64            # 文本最大长度
-LEARNING_RATE = 1e-3    # 学习率
+LEARNING_RATE = 1e-2    # 学习率
 DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')  # 设备选择
 
 model_parameter = f'embedding_{EMBEDDING_DIM}_hidden_{HIDDEN_DIM}_epoch_{EPOCHS}'
 model_path = f'../Output/Model/{model_parameter}.pt'
 vocab_path = '../Output/Model/vocab.pkl'
-train_path = '../dataset/split/train.csv'
-ex_train_1_path = 'D:/vscode/codefield/NIS4307/nis4307_rumordetect/Dataset/split/ex_train_1.csv'  # 新增训练集1
-ex_train_2_path = 'D:/vscode/codefield/NIS4307/nis4307_rumordetect/Dataset/split/ex_train_2.csv'  # 新增训练集2
+train_path = '../Dataset/split/train.csv'
+ex_train_1_path = '../Dataset/split/ex_train_1.csv'  # 新增训练集1
+ex_train_2_path = '../Dataset/split/ex_train_2.csv'  # 新增训练集2
 val_path = '../dataset/split/val.csv'
 test_path = '../dataset/test/test.csv'
 graph_path = f'../Output/Graph/{model_parameter}.png'
@@ -326,7 +326,7 @@ def main():
     print(f"ex1训练集大小: {len(ex_train_1_df)}")
     print(f"ex2训练集大小: {len(ex_train_2_df)}")
     print(f"原始训练集大小: {len(train_df)}")
-    train_df = pd.concat([train_df, ex_train_1_df,ex_train_2_df], ignore_index=True)
+    train_df = pd.concat([train_df], ignore_index=True)
     print(f"合并后的训练集大小: {len(train_df)}")
     val_df = pd.read_csv(val_path)
     print(f"验证集大小: {len(val_df)}")
@@ -347,9 +347,9 @@ def main():
     print("正在初始化模型...")
     model = AdvancedBiLSTM(len(vocab), EMBEDDING_DIM, HIDDEN_DIM).to(DEVICE)
     optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
-    # scheduler = optim.lr_scheduler.ReduceLROnPlateau(
-    # optimizer, mode='max', factor=0.5, patience=3, verbose=True
-    # )
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(
+    optimizer, mode='max', factor=0.8, patience=3, verbose=True
+    )
     criterion = nn.BCEWithLogitsLoss()
 
     # 记录训练过程指标
@@ -394,7 +394,7 @@ def main():
         val_history['f1'].append(val_f1)
         val_history['loss'].append(val_loss)
         
-        #scheduler.step(val_f1)  # 根据验证集F1分数调整学习率
+        scheduler.step(val_f1)  # 根据验证集F1分数调整学习率
         
         print(f'Epoch {epoch+1}/{EPOCHS}')
         # 保存最佳模型
