@@ -11,23 +11,37 @@ from sklearn.metrics import precision_score, recall_score, f1_score, confusion_m
 import numpy as np
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
+import argparse
+
+import nltk
+nltk.download('punkt_tab')
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--embedding_dim', type=int, default=128, help='嵌入维度')
+parser.add_argument('--hidden_dim', type=int, default=256, help='隐藏层维度')
+parser.add_argument('--epochs', type=int, default=20, help='训练轮数')
+parser.add_argument('--lr', type=float, default=0.005, help='学习率')
+args = parser.parse_args()
 
 # 设置随机种子确保结果可复现
 torch.manual_seed(42)
 np.random.seed(42)
 
 # 超参数设置
-BATCH_SIZE = 32         # 批大小
-EMBEDDING_DIM = 128     # 嵌入维度
-HIDDEN_DIM = 256        # 隐藏层维度
-EPOCHS = 20             # 训练轮数
+BATCH_SIZE = 64         # 批大小
+EMBEDDING_DIM = args.embedding_dim     # 嵌入维度
+HIDDEN_DIM = args.hidden_dim        # 隐藏层维度
+EPOCHS = args.epochs             # 训练轮数
 MAX_LEN = 64            # 文本最大长度
-LEARNING_RATE = 1e-2    # 学习率
+LEARNING_RATE = args.lr    # 学习率
 DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')  # 设备选择
 
-model_parameter = f'embedding_{EMBEDDING_DIM}_hidden_{HIDDEN_DIM}_epoch_{EPOCHS}'
+# 路径设置
+# embedding_dim hidden_dim epochs learning_rate
+model_parameter = f'{EMBEDDING_DIM}_{HIDDEN_DIM}_{EPOCHS}_{LEARNING_RATE}'
 model_path = f'../Output/Model/{model_parameter}.pt'
-vocab_path = '../Output/Model/vocab.pkl'
+vocab_path = f'../Output/Model/vocab_{model_parameter}.pkl'
 train_path = '../Dataset/split/train.csv'
 ex_train_1_path = '../Dataset/split/ex_train_1.csv'  # 新增训练集1
 ex_train_2_path = '../Dataset/split/ex_train_2.csv'  # 新增训练集2
