@@ -28,9 +28,11 @@ FACTOR = 0.9            # 学习率衰减因子
 WEIGHT_DECAY = 1e-4     # L2正则化
 DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')  # 设备选择
 
-model_parameter = f'embedding_{EMBEDDING_DIM}_hidden_{HIDDEN_DIM}_epoch_{EPOCHS}'
+# 路径设置
+# embedding_dim hidden_dim epochs learning_rate
+model_parameter = f'{EMBEDDING_DIM}_{HIDDEN_DIM}_{EPOCHS}_{LEARNING_RATE}'
 model_path = f'../Output/Model/{model_parameter}.pt'
-vocab_path = '../Output/Model/vocab.pkl'
+vocab_path = f'../Output/Model/vocab_{model_parameter}.pkl'
 train_path = '../Dataset/split/train.csv'
 ex_train_1_path = '../Dataset/split/ex_train_1.csv'  # 新增训练集1
 ex_train_2_path = '../Dataset/split/ex_train_2.csv'  # 新增训练集2

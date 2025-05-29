@@ -53,3 +53,14 @@ TODO
     - [ ] 调参
 - [ ] 数据集 `lzh`
 - [ ] report `myz`
+
+
+## RUN
+
+```bash
+# 训练模型
+python train_lstm.py --embedding_dim 128 --hidden_dim 256 --epochs 20 --lr 0.005
+# 调用接口 后面为模型参数
+python classify.py --embedding_dim 128 --hidden_dim 256 --epochs 20 --lr 0.005
+```
+
