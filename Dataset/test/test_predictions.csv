@@ -8,7 +8,7 @@ id,text,label,event,pred_label
 535952893589725184,GMLive: ArtsBeat: Cousin of Cornelius Gurlitt Challenges Will That Leaves Collection to Swiss Museum: A cousin... http://t.co/7jogktByJU,0,0,0
 536333336353193985,Last-minute lawsuit filed by relative of Cornelius Gurlitt over Nazi-era art hoard http://t.co/cWPAxyaCB2 Pls RT @ Seb_Kirby,0,0,0
 535450182142672897,Former top judge thinks #Nazi-stolen art 'belongs in a museum' #indianajones #Gurlitt #Germany http://t.co/kqyjtGun9r http://t.co/xNxGpg7RAQ,0,0,0
-536810390739755009,"Swiss museum, German officials to announce fate of  #Gurlitt art collection at 11CET. http://t.co/7NlXiG4hcz",0,0,0
+536810390739755009,"Swiss museum, German officials to announce fate of  #Gurlitt art collection at 11CET. http://t.co/7NlXiG4hcz",0,0,1
 536830979714056192,"Berlin, Munich and Kunstmuseum Bern have signed an agreement on the management of Gurlitt's estate.",0,0,0
 536835870293512192,Gurlitt press release concludes. Many questions being raised by attendees on state of task force investigation and limbo nazi loot objects.,0,0,0
 535919972439322624,Gurlitt’s Museum Bequest Is Challenged http://t.co/I8chboixpD,0,0,0
@@ -21,21 +21,21 @@ id,text,label,event,pred_label
 500364250461003777,"So, to sum up: 1) Darren Wilson KNEW NOTHING of the robbery, 2) shot #MikeBrown over jaywalking, and 3) was allowed to escape #Ferguson.",1,1,1
 500277808883830784,"BREAKING: #Ferguson police chief just announced that officer Darren Wilson shot the unarmed teen, Michael Brown.",1,1,1
 500360889347096576,so ... they clearly released that video  only to shame &amp; blame the victim. #Ferguson #MikeBrown,1,1,1
-499553593041903616,BREAKING: #Anonymous has obtained audio files of police dispatch and EMS during the #MikeBrown shooting. Will release ASAP. #Ferguson,1,1,0
+499553593041903616,BREAKING: #Anonymous has obtained audio files of police dispatch and EMS during the #MikeBrown shooting. Will release ASAP. #Ferguson,1,1,1
 500336373833170945,#Ferguson police are embarking on what can only be described as an elaborate smear campaign of Michael Brown http://t.co/SaLZExqR1D,1,1,0
 500303238810574849,Someone with better eyes than me please #checkthedatestamp on the bottom left photo. Isn't that JUNE? #Ferguson http://t.co/PTNuxY2v5B,1,1,0
 499494187969298432,"What are #Ferguson Police hiding about ""drive by"" shooting of black woman recording last night's action? http://t.co/wfuDYm9q27 #OpFerguson",1,1,0
 498272309535191041,200 cops in riot gear in #ferguson because there is a prayer circle and a concerned compassionate community,1,1,0
 500290456845299714,Here's the police report. Somehow #Ferguson cops valued a box of Swishers at nearly $50. Time to stop smokin I guess http://t.co/8ZkvrHkApc,1,1,0
 500368579875704832,I'm so disgusted. #Ferguson RT @ZandarVTS: This has now devolved into the worst police shooting cover-up attempt in US history.,1,1,0
-500360018928353280,Lawyers for police in bad shootings often advise shooters not to write reports or even speak to commanders or investigators. #Ferguson,1,1,1
+500360018928353280,Lawyers for police in bad shootings often advise shooters not to write reports or even speak to commanders or investigators. #Ferguson,1,1,0
 500284871541940225,I'm NOT believing this story because I know how the police lie and will keep lying and will organize together AND LIE. #MIKEBROWN #Ferguson,1,1,1
 499366666300846081,Line of police cars with high beams on greets anyone trying to enter #Ferguson. It's shut down. No media allowed. http://t.co/bk6jFFM7jj,1,1,0
-500354853680340993,Boom RT @newsneighbor Why was #Ferguson PD still looking for the suspect 7 hours after Michael Brown had been killed? http://t.co/4TH5aFsge2,1,1,0
-499431474731683841,#BREAKING One woman shot in drive-by shooting on 1300 Highmont near the QT. Cannot confirm if the victim survived. #ferguson #mikebrown,1,1,1
+500354853680340993,Boom RT @newsneighbor Why was #Ferguson PD still looking for the suspect 7 hours after Michael Brown had been killed? http://t.co/4TH5aFsge2,1,1,1
+499431474731683841,#BREAKING One woman shot in drive-by shooting on 1300 Highmont near the QT. Cannot confirm if the victim survived. #ferguson #mikebrown,1,1,0
 500277526590423041,BREAKING NEWS: NAME OF OFFICER WHO SHOT #MIKEBROWN - OFFICER DAREN WILSON - #Ferguson,1,1,1
-500280249629036544,Police name the officer who shot #Ferguson teenager #MichaelBrown. Watch: http://t.co/O76WptH1nE  http://t.co/R6bxjsY9CZ,1,1,1
-498294764718915586,White man aiming down on police...nothing happens. Unarmed black kid walking back from store shot 10 times. #Ferguson http://t.co/48EcUF2Bwa,1,1,1
+500280249629036544,Police name the officer who shot #Ferguson teenager #MichaelBrown. Watch: http://t.co/O76WptH1nE  http://t.co/R6bxjsY9CZ,1,1,0
+498294764718915586,White man aiming down on police...nothing happens. Unarmed black kid walking back from store shot 10 times. #Ferguson http://t.co/48EcUF2Bwa,1,1,0
 500291116403789824,"Let's not forget that even if Mike Brown did shoplift, that's not why police said he was stopped or why he was shot. #mikebrown #ferguson",1,1,1
 500328758201815041,Disgusting: MO chapter of Klan raising money as “reward” for the officer killing #MikeBrown. #Ferguson #UniteBlue http://t.co/xRCCazRSFs,1,1,0
 500289307257868288,The selective release of information by #Ferguson PD tells us nothing about the shooting. Instead appears to be a basic smear job.,1,1,0
@@ -88,7 +88,7 @@ id,text,label,event,pred_label
 498283038338711552,They've brought the dogs out in #Ferguson https://t.co/gXQeLtaXjt,0,1,0
 499703156889362432,#BREAKING: State Senator Maria Chapelle Nadal has been taken into police custody; she had been tear-gassed at an earlier protest. #Ferguson,0,1,0
 499478732315566080,Your friendly local police department. Protect and Serve. #Ferguson http://t.co/LIUfLlnXXK,0,1,0
-500362679039840257,RT @FreeTopher: OFFICER DARREN WILSON STANDING OVER MIKE BROWN'S BODY AFTER SHOOTING HIM 9 TIMES #Ferguson http://t.co/7uAMFPdyPO,0,1,0
+500362679039840257,RT @FreeTopher: OFFICER DARREN WILSON STANDING OVER MIKE BROWN'S BODY AFTER SHOOTING HIM 9 TIMES #Ferguson http://t.co/7uAMFPdyPO,0,1,1
 500163501961142275,"Photo taken by @FroGoddess ""thanks for the advice #Palestine"" - #Ferguson #STL #MikeBrown http://t.co/UkfKu2Zzdl",0,1,0
 500322242296041473,"If Michael Brown had been carrying a gun, would Republicans still say he had a right to bear arms? Or is that only for white men? #ferguson",0,1,0
 499529014797557760,All of yesterday's Vines in one YouTube video. #ferguson  http://t.co/Q2wUmBg5Cr,0,1,0
@@ -116,12 +116,12 @@ id,text,label,event,pred_label
 499655869412286464,"Anti-Gunners Donated $500k+ 2 Defeat Pro-Gun Sheriff, He Won Anyway! http://t.co/KdWIsaSDhT #tcot #2A #Ferguson #NRA http://t.co/9LQkU5JOlv",0,1,0
 499688532391526400,#Ferguson heavily armed police in military gear arriving on armed personnel carriers now http://t.co/GbGdrhZBlM,0,1,0
 499488337338843137,Is that a bag of chips?! #REAL RT @GinoTheGhost: May be the dopest photo of the year #Ferguson http://t.co/ZxF3zhbjHb,0,1,0
-499705599454883840,"Looking at #Ferguson and feeling anger, then helplessness, then more anger. They're not even pretending to acknowledge our humanity.",0,1,0
+499705599454883840,"Looking at #Ferguson and feeling anger, then helplessness, then more anger. They're not even pretending to acknowledge our humanity.",0,1,1
 499706059691663360,"Tears streaming down my face as I watch little kids stepping and chanting ""justice for #MikeBrown"" with rifles trained on them. #Ferguson",0,1,0
 498504673339666432,This would help tremendously. #mikebrown #Ferguson http://t.co/FNVnuZLWd1,0,1,0
 499698357397237762,Those cops on line in #Ferguson don't have riot shields and batons. They have rifles. The only thing they can do with those is shoot people.,0,1,0
 500320286341099523,"#Ferguson is 60% black, but virtually all its cops are white. http://t.co/U7Yk4s4nyE http://t.co/gHlnoPH4dK",0,1,0
-500430673099104256,"Wake up. Whenever a black man is killed by police, they try to make him a Saint/Martyr. 99% of the time he's a POS #Thug. #Ferguson",0,1,1
+500430673099104256,"Wake up. Whenever a black man is killed by police, they try to make him a Saint/Martyr. 99% of the time he's a POS #Thug. #Ferguson",0,1,0
 499665704300191745,"More startling statistics about the segregated population of #Ferguson, Mo. http://t.co/uYrldQHoj7 http://t.co/vgxuLMYDhz",0,1,0
 500074069354905600,Times Square right now for #Ferguson #MichaelBrown http://t.co/m0e1eFJet2,0,1,0
 500186504279625728,4 arrested in Times Square after march supporting #Ferguson http://t.co/I40SlR3Jbm #NMOS14 http://t.co/QRT7VzEiRe,0,1,0
@@ -167,14 +167,14 @@ id,text,label,event,pred_label
 580379486732066817,"BREAKING: Distress call linked with #Germanwings jet came from air traffic control, not plane -- aviation official. http://t.co/EOKW9FoIJ4",1,4,1
 580333028624457728,148 on board: - 142 passengers - 2 pilots - 4  flight attendants  @SPIEGEL_English @Corriereit  #Germanwings http://t.co/VT9w6qumJa,1,4,1
 580322349569994752,"Germanwings #A320 plane crashes in southern France, French prime minister says. More soon. http://t.co/cBKN5dN40H",1,4,1
-581287795991302144,All Muslims are not like that... Okay? RT @DrShobha The co-pilot of the Germanwings Airbus was a convert to Islam,1,4,0
+581287795991302144,All Muslims are not like that... Okay? RT @DrShobha The co-pilot of the Germanwings Airbus was a convert to Islam,1,4,1
 580330302251393024,#BREAKING: #Germanwings Airbus A320 crew sent distress signal before French Alps crash - reports http://t.co/JLDCz6AhFR,1,4,1
 581314363644121088,A German news website claims #Germanwings co-pilot #AndreasLubitz was a Muslim convert http://t.co/4PHWRSrxwu,1,4,1
 580366761398239232,Germanwings Airbus A320 plane crash: Two babies and 16 children among 150 dead http://t.co/UGlaM0vpoK http://t.co/9yCcn7Hzz8,1,4,1
 580351367719591936,Lufthansa and Germanwings have established a telephone hotline. The toll-free 00800 11 33 55 77 number is available to all the families...,0,4,0
 580336341080260608,"“If our fears are confirmed, this is a dark day for Lufthansa,” says CEO of Germanwings' parent company after crash http://t.co/tJVCCJSY4G",0,4,0
 580327576218046464,BREAKING NEWS: Germanwings flight GWI18G crashes in French Alps: http://t.co/v8yssTEbHR http://t.co/GA8ZdGUq30,0,4,1
-581257660118491136,A tribute to the lives lost on #Germanwings Flight 9525 next on #AC360 http://t.co/zDHWF3pYN9,0,4,1
+581257660118491136,A tribute to the lives lost on #Germanwings Flight 9525 next on #AC360 http://t.co/zDHWF3pYN9,0,4,0
 580361142666563584,Helicopters and emergency vehicles are arriving in southern France. #Germanwings http://t.co/2Ry7Itpo4L,0,4,0
 580325243631321088,Germanwings Airbus A320 crashes in French Alps: What we do and do not know http://t.co/3xKSCtFFwT http://t.co/ugwghZVbHr,0,4,0
 580322653472493569,IMAGE: Flightradar24 has this as the plane's last position. #4U9525 http://t.co/CIeAyJ4AOf - @BBCRosAtkins,0,4,0
@@ -188,7 +188,7 @@ id,text,label,event,pred_label
 580329219646988289,Last position of the #GermanWings Airbus A320 passenger jet that crashed in the French Alps http://t.co/8UPMsinQkX http://t.co/K3etnEPmxk,0,4,1
 580335608477982720,Germanwings  flight 4U9525 crashes in French Alps: a 'dark day' for Lufthansa if #4U9525 fears realised - live http://t.co/9la7dYRcUz,0,4,0
 580326744357515264,"Here is the speed and altitude graph of #4U9525 from @flightradar24. Scary stuff, shows it impacted ground at 400kts http://t.co/2ZYbh4MIih",0,4,0
-580328297462140928,#Germanwings Airbus A320 flight was travelling from Spain to Germany when it crashed. http://t.co/EDoH4hAD7w http://t.co/ODxFHTAWY9,0,4,1
+580328297462140928,#Germanwings Airbus A320 flight was travelling from Spain to Germany when it crashed. http://t.co/EDoH4hAD7w http://t.co/ODxFHTAWY9,0,4,0
 580324804403818496,"An Airbus A320 plane operated by Germanwings crashed in France near Digne les Bains, French Prime Minister says. http://t.co/iWeLBpmiHS",0,4,1
 580340024736116736,"""No survivors"" from #Germanwings crash in the Alps, French transport minister says http://t.co/iw1QLzJQKW http://t.co/Q0ssqcSKp2",0,4,0
 580330690807394304,"Lufthansa CEO Spohr: “If our fears are confirmed, this is a dark day for Lufthansa. We hope to find survivors.” #4U9525",0,4,0
@@ -200,59 +200,59 @@ id,text,label,event,pred_label
 544275597464444929,Australian police cordon off Sydney street; reports say hostages held in a cafe. Flag in window similar to those used by #ISIS militants,1,5,1
 544511130249744384,#sydneysiege: A series of loud blasts and bursts of ammunition have been heard at the cafe. http://t.co/IxPuyIrNy2 http://t.co/olteaN8zjH,1,5,1
 544282449388519424,"Hostages held in Sydney cafe, Islamic flag seen in window: local TV http://t.co/BF78HpFgWh",1,5,1
-544289880805605376,The PM's office releases a statement about  #sydneysiege. http://t.co/7NdqPYhwcY http://t.co/jeYdlwywO7,1,5,0
+544289880805605376,The PM's office releases a statement about  #sydneysiege. http://t.co/7NdqPYhwcY http://t.co/jeYdlwywO7,1,5,1
 544367462012432384,"MORE: Police confirm 3 hostages escape Sydney cafe, unknown number remain inside http://t.co/pcAt91LIdS #Sydneysiege",1,5,1
 544317165965303808,Ugh: Uber introduces $100 minimum surge pricing during #SydneySiege http://t.co/9YZ9WKo7D2 via @jennijenni http://t.co/9Xk76P4S3V,1,5,1
 544274585697280000,Sydney cafe siege: Martin Place is in lockdown and surrounding buildings evacuated as a serious siege situation unfolds at the Lindt cafe.,1,5,1
 544511151900753921,#BREAKING: Police have stormed the Lindt Chocolate Cafe in Martin Place #sydneysiege #ABCNews24,1,5,1
 544377046030635008,"BREAKING: 2 more hostages escape Sydney cafe, local media report",1,5,1
-544516427827249153,#BREAKING: Police confirm that #SydneySiege is over. A bomb robot is to enter the front door of the care shortly.,1,5,1
+544516427827249153,#BREAKING: Police confirm that #SydneySiege is over. A bomb robot is to enter the front door of the care shortly.,1,5,0
 544280873806610433,UPDATE: Reports the Sydney Opera House has also been evacuated. #9News,1,5,1
 544307161589772290,"Islamist militants take hostages in Sydney café, display black jihadist flag http://t.co/Audo3xS9w3 #sydneysiege http://t.co/mDWczVjCNc",1,5,1
 544512108885725184,Paramedics are currently carrying out a number of hostages in #MartinPl. #SydneySiege #9News,1,5,1
-544387967037763584,#sydneysiege: There are reports the hostage-taker claims to have up to four bombs. http://t.co/1gMsZkOTjC http://t.co/hrMncBhLy5,1,5,1
+544387967037763584,#sydneysiege: There are reports the hostage-taker claims to have up to four bombs. http://t.co/1gMsZkOTjC http://t.co/hrMncBhLy5,1,5,0
 544509086998749186,Update - five more hostages have escaped from the Lindt cafe in Sydney city centre,1,5,1
 544268637134393344,UPDATE: An ISIS flag is being displayed in the window of a café under siege in Sydney’s Martin Place. #9News,1,5,1
 544511558173601792,BREAKING @SkyBusiness : multiple gunshots fired into Lindt cafe #sydneysiege http://t.co/ZuJMZKfJKT (@carsonscottLIVE),1,5,1
 544272701108797440,"JUST IN: Two gunmen, dozen hostages inside cafe in Sydney, Australia. ISIS flags remain on display. - @KristyMayr7 http://t.co/p4GyCRobSa",1,5,1
-544451181754744832,#sydneysiege: Up to 20 hostages are being held in darkness in a cafe in Sydney. http://t.co/5jtd36wFOU http://t.co/Gmt7PAuHzb,1,5,1
-544341406094213121,Deserted grounds of the evacuated #Sydney Opera House - More on our LIVE page: http://t.co/VaKt3ZpRZR #sydneysiege http://t.co/pKWvDgpOle,1,5,0
+544451181754744832,#sydneysiege: Up to 20 hostages are being held in darkness in a cafe in Sydney. http://t.co/5jtd36wFOU http://t.co/Gmt7PAuHzb,1,5,0
+544341406094213121,Deserted grounds of the evacuated #Sydney Opera House - More on our LIVE page: http://t.co/VaKt3ZpRZR #sydneysiege http://t.co/pKWvDgpOle,1,5,1
 544272561266503681,BREAKING a hostage siege in Sydney with a man with an IS flag or similar - live reports from @bkjabour http://t.co/VWugbceCAR,1,5,1
 544510827433558016,A loud bang was reportedly heard moments before a group of hostages fled the cafe http://t.co/IxPuyIrNy2 #sydneysiege http://t.co/PjH3lFYdNW,1,5,1
 544351969658564608,"UPDATE: Reports the gunman has released three hostages, with the six hour #siege unravelling. Details to come. #9News",1,5,1
 544492843499540480,BREAKING: Now free to confirm that radical cleric Sheikh Man Monis has been named as gunman behind #SydneySiege. http://t.co/siHXBFN6RS,1,5,1
 544301900682629121,Police take down suspect in #MartinPlace. Unclear whether related to siege http://t.co/mHXj4Hbmr9 #Sydney http://t.co/udwnmov1Lb,1,5,1
-544377700677615616,Total number of people who have left the cafe in Sydney up to 5. The latest: http://t.co/Nl3BNlFidA #SydneySiege http://t.co/TgZkYFNlR9,1,5,1
+544377700677615616,Total number of people who have left the cafe in Sydney up to 5. The latest: http://t.co/Nl3BNlFidA #SydneySiege http://t.co/TgZkYFNlR9,1,5,0
 544286537299787777,"Heya @espn can you put ""Hostage crisis in Sydney. Islamist flag held in window"" on your crawl so Obama sees it? Thanks.",1,5,1
 544382892378714113,Five Hostages Escape Sydney Cafe Siege — Live Updates From @BuzzFeedOz http://t.co/aFHirytbFH http://t.co/BiLJuBBc5R,1,5,1
 544511112654618624,#BREAKING: Heavily armed police look to be storming the Lindt Café. #SydneySiege #9News,1,5,1
 544511676088066048,"What we know about Sheikh Haron, the suspected hostage taker in #SydneySiege http://t.co/KUEe3Bl2tp http://t.co/ZRzH6vunkh",1,5,0
-544291619084959744,BREAKINGNEWS: One of the perpetrators have demanded to speak to President Tony Abbott. Threatens to blow explosives every 30min #sydneysiege,1,5,0
+544291619084959744,BREAKINGNEWS: One of the perpetrators have demanded to speak to President Tony Abbott. Threatens to blow explosives every 30min #sydneysiege,1,5,1
 544292670336925696,UPDATE: 13 hostages inside Sydney coffee shop near Sydney Opera House; Abbott will deliver a statement shortly. #ISISAttacks #sydneyseige,1,5,1
 544355924224532481,JUST IN: Police: 3 people were able to run from Sydney cafe during ongoing hostage situation - @9NewsAUS http://t.co/wFfwbG9Gg6,1,5,1
 544294402366394369,CEO of Lindt cafe says 40-50 hostages held by 2 gunmen. Significantly higher number than initially thought #MartinPlace #sydneysiege,1,5,1
 544343410849886209,Updated: An armed person took hostages in a Sydney cafe and displayed a black flag with Arabic script http://t.co/P42f29rnK1,1,5,1
 544296671950020609,From @guardian on Ray Hadley's speculative reports: #sydneysiege http://t.co/qRXKjmJZyq,1,5,0
-544369667096477696,"Police Surround Sydney Cafe, Where Armed Person Holds Hostages http://t.co/CPrsOcTuis",1,5,1
+544369667096477696,"Police Surround Sydney Cafe, Where Armed Person Holds Hostages http://t.co/CPrsOcTuis",1,5,0
 544462330105712640,Sydney airspace wasn't closed. A second terror suspect wasn't arrested. Myths around #sydneysiege debunked. http://t.co/yTLKLUKnFd,1,5,1
 544518841020473345,"#BREAKING @CNN reports #sydneysiege appears to be over. Two people are confirmed dead, three in serious condition.",1,5,1
 544340091615715329,hostages in Sydney right now... my thoughts and prayers are with you guys.   so much hatred in the world. this isn't the way.. #sydneysiege,1,5,0
-544515097625108480,"CPR being performed on at least 2 after Sydney siege, which has now ended, Australia's ABC reports http://t.co/Y62bZ2YYa5",1,5,0
+544515097625108480,"CPR being performed on at least 2 after Sydney siege, which has now ended, Australia's ABC reports http://t.co/Y62bZ2YYa5",1,5,1
 544352874969698305,#SYDNEYSIEGE: 3 people escape gunman-held Lindt Café http://t.co/1ZlzKDjvSf http://t.co/DJCj55u6qk,1,5,1
-544287991959539713,ABC understands the national security committee of cabinet has just wrapped up a meeting about the #sydneysiege http://t.co/7NdqPYhwcY,1,5,0
+544287991959539713,ABC understands the national security committee of cabinet has just wrapped up a meeting about the #sydneysiege http://t.co/7NdqPYhwcY,1,5,1
 544288799711592448,Hostages taken in Sydney cafe as Islamic flag is reportedly flown http://t.co/OD9gOTGh2w,1,5,1
 544374018661687296,Sydney in lockdown as at least one gunman holds several people hostage in a café http://t.co/qgq2xmaVUt #sydneysiege http://t.co/qTYpQM9snG,1,5,1
-544319832486064128,"Hostage situation erupts in Sydney cafe, Australian prime minister says it may be ""politically motivated"" http://t.co/439C1MkRWf",1,5,1
+544319832486064128,"Hostage situation erupts in Sydney cafe, Australian prime minister says it may be ""politically motivated"" http://t.co/439C1MkRWf",1,5,0
 544518033902149632,"Stretchers taken from Sydney cafe after police storm building; fate of hostage-taker unknown - @NBCNews, @7NewsSydney http://t.co/N5mmnilz4Z",1,5,1
-544278985249550337,Geoblock lifted on #ABCNews24. Streaming coverage of the Martin Place siege in Sydney here  http://t.co/HvQuvP4SIb.,1,5,1
+544278985249550337,Geoblock lifted on #ABCNews24. Streaming coverage of the Martin Place siege in Sydney here  http://t.co/HvQuvP4SIb.,1,5,0
 544296158206894081,Breaking: Sydney On Lockdown as Dramatic Siege Unfolds http://t.co/Xpjpgbf2Pb #sydneysiege http://t.co/31KmD0zuIx,1,5,1
 544477404342018048,#IllRideWithYou  Sydney Stands Up To Racism &amp; Bigotry With One Beautiful Hashtag  http://t.co/Ajaa1AQmG5 http://t.co/BQN4rBxhYK,0,5,0
 544446269968908289,Thousands tweet declaring their solidarity with Muslims #IllRideWithYou #sydneysiege http://t.co/4REoJBzPxD http://t.co/zAQvgvzF9G,0,5,0
 544432946841538560,"Mosques, synagogues, churches hold unity prayers #sydneysiege http://t.co/AQHlrOe3UW http://t.co/doMdGfLWeg",0,5,0
 544399649025433601,RT RT RT @ZeeGingaNinja: because it seems that some people here need this clarification #sydneysiege #NotInMyName http://t.co/perQGp5yro,0,5,0
-544343625069379584,Two young guys have arrived and are swigging from bottles of white wine. This is a hostage situation #sydneysiege http://t.co/nwGAIcqt3S,0,5,1
+544343625069379584,Two young guys have arrived and are swigging from bottles of white wine. This is a hostage situation #sydneysiege http://t.co/nwGAIcqt3S,0,5,0
 544370072018378752,Can we add Daily Telegraph to suspected terror cells within Aus? Their 2pm edition did more damage than any gunman ever could #sydneysiege,0,5,1
-544497307933474816,"#SydneySiege UPDATE: Gunman identified as local resident Man Monis, has police records http://t.co/6bXGBh0qHD http://t.co/3vw2bF1Ojo",0,5,0
+544497307933474816,"#SydneySiege UPDATE: Gunman identified as local resident Man Monis, has police records http://t.co/6bXGBh0qHD http://t.co/3vw2bF1Ojo",0,5,1
 544447054034919424,Channel 9 now showing footage of 9/11. You've gotta gotta gotta be kidding me. #sydneysiege,0,5,0
 544338622422335489,"Things getting ugly... A racist bloke yelling at rest of the crowd, ""Muhammed is a pedophile, rapist"" #sydneysiege http://t.co/q2TPg0In5Q",0,5,0
 544309497041133568,My fellow Australians. Let's stand together against the #sydneysiege as well as the hatred against innocent Muslim #Australians.,0,5,0
@@ -260,7 +260,7 @@ id,text,label,event,pred_label
 544415616753745920,Australians offering support to Muslims on public transport who fear racist abuse using the #illridewithyou hashtag. #sydneysiege,0,5,0
 544449039433883650,#illridewithyou reflects the true #aussiespirit during the undesirable actions of the few! Stand tall in the face of adversity! #SydneySiege,0,5,0
 544373945206460416,The #SydneySiege only works to sabotage the message Islam.,0,5,0
-544520344976232449,#BREAKING: Australian police confirm Sydney siege is over,0,5,0
+544520344976232449,#BREAKING: Australian police confirm Sydney siege is over,0,5,1
 544435176479027200,a thousand words in one picture. the police have been absolutely amazing today #sydneysiege http://t.co/w9Gt6rlYes,0,5,0
 544435685864660992,"A Muslim,a Jew &amp; a Christian walk into a bar.Except it's an interfaith solidarity stand against bigotry in Sydney. ❤️ http://t.co/rp5jRN5uPp",0,5,0
 544379787246981122,Their faces say it all. #Sydneysiege continues more&gt;http://t.co/6EAaEKw4n9 http://t.co/NkzVcf9mxv,0,5,0
@@ -280,7 +280,7 @@ id,text,label,event,pred_label
 544427461136502784,To any American tweeting about how #sydneysiege could have been averted if we carried guns. No -- imagine how much worse it could have been.,0,5,0
 544495167836016640,"At least 5 dead as gunman goes on rampage in PA, suspect reportedly barricaded in a home http://t.co/aCLslANGxu http://t.co/H4Mhm1cyOm",0,5,1
 544411561205301248,The Lebanese Muslim Association has issued a statement condemning #sydneysiege and calling for calm. http://t.co/z2hCIBPaha,0,5,0
-544299273664593920,Australian prime minister Tony Abbott to hold news conference live on Sky News at 1.30am GMT about ongoing Sydney hostage situation,0,5,1
+544299273664593920,Australian prime minister Tony Abbott to hold news conference live on Sky News at 1.30am GMT about ongoing Sydney hostage situation,0,5,0
 544396608704901120,Subscribe to our #sydneysiege Twitter list for more updates: http://t.co/3eg2WK3wxu http://t.co/QhRxcGQNbM,0,5,0
 544447757860483072,#IllRideWithYou: Australians show solidarity with Muslims amid the Sydney siege http://t.co/5hFgbIp2C3 http://t.co/czDCx7OdM4,0,5,0
 544458445764968448,"hope they'll be safe. I'm at the opposite of the world but I'll pray for you, Sydney #illridewithyou #PrayForSydney http://t.co/VEcdVkGnRP",0,5,0
@@ -289,7 +289,7 @@ id,text,label,event,pred_label
 544378232624410624,A radical Muslim wants to chop off your head.  A moderate Muslim wants a radical Muslim to chop off your head.  #sydneysiege,0,5,0
 544503425082613761,"The man believed to be holding hostages in Sydney is Man Haron Monis, known as Sheikh Haron, source says http://t.co/6T7xVdcwdD",0,5,1
 544338676835041280,"An argument breaks out in crowd watching #sydneysiege after one man goes on anti-Islamic rant. He's told ""Muslims are welcome here mate!""",0,5,0
-544391790615605249,"""Profoundly shocking"" -Australia PM Tony Abbott delivers second  #sydneysiege statement. MORE: http://t.co/VaKt3ZpRZR http://t.co/I9VOzKLcET",0,5,0
+544391790615605249,"""Profoundly shocking"" -Australia PM Tony Abbott delivers second  #sydneysiege statement. MORE: http://t.co/VaKt3ZpRZR http://t.co/I9VOzKLcET",0,5,1
 544316684736028673,"Man what on Earth is going on in Sydney. Despicable. Life in prison no parole for the idiots responsible, set a hard line, no tolerance.",0,5,0
 544337283801829376,"My thoughts are with the hostages, their families and everyone in Sydney right now.",0,5,0
 544376469279875072,"""You never see non-Muslims do things like this."" #SydneySiege http://t.co/nPxTMBmK11",0,5,0
@@ -297,7 +297,7 @@ id,text,label,event,pred_label
 544280391226761218,"What's happening in Sydney will happen in the uk it's inevitable, and our political leaders will have blood on their hands",0,5,0
 544499780479893504,A Muslim lady took off her scarf out of fear after the Sydney Siege &amp; is comforted by strangers. #illridewithyou http://t.co/JJbPhn0YKh,0,5,0
 544503881527742464,Suspected jihadist in #Sydney standoff ID'd as Iranian sex offender as ordeal enters 15th hour http://t.co/WrPVZSJHlX http://t.co/dJuzEHM1hX,0,5,0
-544434192478519297,A female hostage stands by the front entrance of the cafe as she turns the lights off in Sydney. #sydneysiege http://t.co/qNfCMv9yZt,0,5,0
+544434192478519297,A female hostage stands by the front entrance of the cafe as she turns the lights off in Sydney. #sydneysiege http://t.co/qNfCMv9yZt,0,5,1
 544496648445890561,Australia's reaction to the #sydneysiege is magnificent. #illridewithyou http://t.co/Lq0VjkWreY http://t.co/7k7o55TkYE,0,5,0
 544388259359387648,"You can't condemn an entire race, nation or religion based on the actions of a few radicals, please keep that in mind #sydneysiege",0,5,0
 544461947882586112,'Sick' people are actually taking selfies at the site of the #sydneysiege http://t.co/DebSinfhyH http://t.co/rHDxHczlWc,0,5,0
@@ -306,7 +306,7 @@ id,text,label,event,pred_label
 544515215576948736,"Sydney siege on all day, but we haven't seen any TV reporters hyperventilating, or using words like exclusive, breaking news. Lazy Aussies?",0,5,0
 544497405237161984,"Man Haron Monis, named as the #sydneysiege gunman, may have a ""fetish for self-publicity"". http://t.co/UdkysqURCT http://t.co/vNDbnOkdt8",0,5,1
 544332610097676288,Just in: U.S. Consulate near the scene in Sydney has accounted for all of its personnel: http://t.co/0h2F8SVCS2 @CNN http://t.co/UUiuFBi01A,0,5,0
-544336572141694976,#SYDNEYSIEGE: Crowd gathers at police cordon in anticipation of news on hostage situation  http://t.co/2zFjvlPC1n http://t.co/YW5zGPMEWS,0,5,1
+544336572141694976,#SYDNEYSIEGE: Crowd gathers at police cordon in anticipation of news on hostage situation  http://t.co/2zFjvlPC1n http://t.co/YW5zGPMEWS,0,5,0
 544410900854091776,Australian Muslim community releases statement in response to #sydneysiege. http://t.co/KE9UFxdXuD,0,5,0
 544464445787750401,RT @mina_ysf: Religious leaders meet at Lakemba mosque in Sydney to pray for hostages  #sydneysiege http://t.co/D0nQRWwz5D,0,5,0
 544286688436969472,"thinking of the people in Martin Place in Sydney right now, and for the police, etc having to deal with the situation. so terrifying",0,5,0
@@ -315,7 +315,7 @@ id,text,label,event,pred_label
 544478625383608320,"Indians : OMG OMG. Can't believe this. God is Cruel. #sydneysiege  Today, Bomb Blast in Imphal. Indians: Where is Imphal?",0,5,0
 544298334354411521,"“This is obviously a deeply concerning incident,” Australian Prime Minister says on unfolding situation in Sydney. http://t.co/02SVSxOrFt",0,5,0
 544301589931241472,"Australian PM Abbott expected to speak soon on ""reported hostage-taking incident"" in Sydney, @9NewsAUS reports - @WorldNews",0,5,1
-524975847846203393,NHL says date of rescheduled game TBD. NHL  ``wishes to express its sympathy and prayers to all affected by the tragic events in Ottawa'',1,6,0
+524975847846203393,NHL says date of rescheduled game TBD. NHL  ``wishes to express its sympathy and prayers to all affected by the tragic events in Ottawa'',1,6,1
 524965786059026432,"BREAKING NEWS: ONE SOLDIER HAS DIED AFTER OTTAWA SHOOTING, SUSPECT(S) STILL AT LARGE - http://t.co/lXFiYaVImZ",1,6,1
 524975642379816960,The NHL announces tonight's game between the #Leafs and #Sens in Ottawa has been postponed,1,6,1
 524987990524047361,Ottawa police chief confirms that both gunman and soldier at war memorial are dead.,1,6,1
@@ -330,12 +330,12 @@ id,text,label,event,pred_label
 525058976376193024,Our thoughts and prayers go out to Nathan Cirillo who died today in Ottawa while protecting his country at age 24 http://t.co/PfwasSALPX,1,6,0
 524949315245322241,Gun fire exchange in Parliament Hill building #Ottawa #parliament #shooting #Canada #BeSafeOttawa -https://t.co/9RDjNvVkJW via @martinvass2,1,6,1
 524926279309860864,"Shots are fired outside Canadian parliament in Ottawa and a soldier is wounded, local media report http://t.co/Ygpjna1CRG",1,6,1
-524943812339437569,Global News camera man reporting shots fired by Chateau Laurier hotel #ottawa,1,6,1
+524943812339437569,Global News camera man reporting shots fired by Chateau Laurier hotel #ottawa,1,6,0
 524947424482435073,"#BREAKING: Shooter is dead, according to sources on Parliament Hill",1,6,1
 525026715123601408,"Cpl. Nathan Cirillo identified as soldier shot, killed in Ottawa today, aunt says - @globeandmail http://t.co/oVrp10U6uG",1,6,1
-524983146266505216,Ottawa police confirm 1 male shooting suspect died; no one in custody - @OttawaPolice http://t.co/9emMsGE1FZ,1,6,1
+524983146266505216,Ottawa police confirm 1 male shooting suspect died; no one in custody - @OttawaPolice http://t.co/9emMsGE1FZ,1,6,0
 525055879545380864,Our thoughts are with the family and friends of Cpl. Nathan Cirillo and all those affected by the events in Ottawa today. #OttawaStrong,1,6,1
-524965775036387329,"Hero. @affanchowdhry: Kevin Vickers, head of security in parliament, being credited for taking down shooter #Ottawa http://t.co/rVYetE0KYq""",1,6,1
+524965775036387329,"Hero. @affanchowdhry: Kevin Vickers, head of security in parliament, being credited for taking down shooter #Ottawa http://t.co/rVYetE0KYq""",1,6,0
 525026592788348929,Ottawa shooting suspect named as Michael Zehaf-Bibeau – 2 U.S. sources tell ABC News.,1,6,1
 524966904885428226,BREAKING UPDATE: Canadian soldier injured at Parliament Hill shooting dies http://t.co/Zp9AKplH9p  #Ottawa,1,6,1
 525039208139087872,DEVELOPING: #Canada officials identify dead gunman in Parliament shooting as Michael Zehaf-Bibeau. http://t.co/pfaAxISVyR,1,6,1
@@ -346,14 +346,14 @@ id,text,label,event,pred_label
 524956372199555072,"Map of areas where Ottawa shootings were reported: National War Memorial, near the Rideau Centre and Parliament Hill. http://t.co/NcfNCR5VCV",1,6,1
 525021083892994049,Rest in peace Cpl. Nathan Cirillo via @globeandmail #ottawashooting http://t.co/voEK2MZpfR http://t.co/sMpeSGv4HY,1,6,1
 525040408653754368,"BREAKING NEWS: Suspected Ottawa gunman identified as Michael Joseph Hall, an #ISIS sympathizer. #OttawaShooting",1,6,1
-524980744658382848,"#RCMP to hold news conference on #Ottawa shootings at 2 pm ET, 11 am PT. Watch live coverage @ http://t.co/kngapKTSCe",1,6,1
+524980744658382848,"#RCMP to hold news conference on #Ottawa shootings at 2 pm ET, 11 am PT. Watch live coverage @ http://t.co/kngapKTSCe",1,6,0
 524959836778536961,UPDATE: Ottawa police confirm gunman in Canada shooting shot and killed. Search on for possible additional gunmen. http://t.co/sV7ZH50tlf,1,6,1
-524991844292521984,Ottawa Police won't say if there are still suspects at large; say it is still an active operation - live video http://t.co/aF9HyT9BgX,1,6,1
+524991844292521984,Ottawa Police won't say if there are still suspects at large; say it is still an active operation - live video http://t.co/aF9HyT9BgX,1,6,0
 525039876366798849,Let #NathanCirillo be remembered like this.The part time soldier doing his job &amp; bringing a little happiness #Ottawa http://t.co/GPCfrq1uI3,1,6,0
 524981513637888000,UPDATE: This morning’s shooting incidents occurred at the National War Memorial and on Parliament Hill.  Not Rideau Centre. #ottnews,1,6,1
 524958227768020992,BREAKING: Two new patients coming to Ottawa hospital civic campus. One with gunshot wounds. Just confirmed #ottnews,1,6,1
 524932935137628160,The gunman in Ottawa has been shot and killed. I'm at a loss for words this morning. That isn't my Canada.,1,6,1
-525005886272843776,Kevin Vickers hailed as hero who took down attacker at Parliament Hill: http://t.co/sG70iQtfSM #cbcOTT #OTTnews http://t.co/zuSOkiOzck,1,6,1
+525005886272843776,Kevin Vickers hailed as hero who took down attacker at Parliament Hill: http://t.co/sG70iQtfSM #cbcOTT #OTTnews http://t.co/zuSOkiOzck,1,6,0
 525028522361114625,"Ottawa shooting: Nathan Cirillo, reservist from Hamilton, killed in attack http://t.co/cUzepktlxx http://t.co/hqR6R0q9jl",1,6,1
 525062993898635264,Rest In Peace Corporal Nathan Cirillo.   #Respect  #Ottawa  #Canada  #tcot http://t.co/1mIBOBohd4,1,6,1
 524976486902951936,Map of three #Ottawa locations where police say shots have been fired http://t.co/QrP5bauJcR http://t.co/nutT2VYvpD,1,6,1
@@ -363,16 +363,16 @@ id,text,label,event,pred_label
 525025279803424768,The soldier shot dead in Wednesday's Ottawa attacks has been named as Cpl. Nathan Cirillo of #HamOnt #ottawashooting http://t.co/MxLMptnlWw,1,6,1
 524981689781870593,One shooting victim succumbed to injuries. He was a member of the Canadian Forces. Our thoughts and prayers are with him and his loved ones.,1,6,0
 525040492388823041,"Kurdistan is with you Canada &amp; Israel, we are fighting ISIS right now. #TwitterKurds #Ottawa #Jerusalem #Kobane ISIL http://t.co/X8bW6SIeFD",0,6,0
-524969431534153728,Ottawa youth: If you need to talk: 24/7 Crisis Line 613-260-2360 or 1-877-377-7775 (toll free for Eastern Ontario) crisis@ysb.on.ca,0,6,0
+524969431534153728,Ottawa youth: If you need to talk: 24/7 Crisis Line 613-260-2360 or 1-877-377-7775 (toll free for Eastern Ontario) crisis@ysb.on.ca,0,6,1
 525063393309630464,VIDEO: Key moments in today's Parliament Hill shootings. http://t.co/kR1mIPoJJg http://t.co/6gYfgPTH7q,0,6,0
-524968185016360960,"#Leafs Joffrey Lupul praises officers in Ottawa, as team remains in lock down http://t.co/OPooNxTsiv http://t.co/yBjIu2JaaP",0,6,1
-524979070288019456,"Prayers for those in Ottawa, hope all is resolved soon...",0,6,0
+524968185016360960,"#Leafs Joffrey Lupul praises officers in Ottawa, as team remains in lock down http://t.co/OPooNxTsiv http://t.co/yBjIu2JaaP",0,6,0
+524979070288019456,"Prayers for those in Ottawa, hope all is resolved soon...",0,6,1
 525068253341970432,"What an awful day in Ottawa. Thoughts and prayers are with our @Senators family, the entire city of Ottawa and all of Canada.",0,6,0
 524924987774631936,#BREAKING: Shooting reported at the War Memorial in Ottawa,0,6,1
 524974900017373184,"Just hearing the news, thoughts today are back home with the citizens and dedicated public servants in Ottawa and across the country.",0,6,0
 524950455743291392,Thinking about everyone in Ottawa right now. Please be careful and stay safe until the situation is under control.,0,6,0
 525050193360613376,"Sad about #OttawaShooting. Worse, shooter might b guy who calls himself Muslim. Pls world dont judge 1.5 billion Muslims by some extremists.",0,6,0
-524955388190662657,Shot from inside caucus room after shooting @ctvottawa #ottawashooting. http://t.co/JjEWpnbUW7,0,6,1
+524955388190662657,Shot from inside caucus room after shooting @ctvottawa #ottawashooting. http://t.co/JjEWpnbUW7,0,6,0
 524985046198157313,Stay safe Ottawa...world is getting worse by the minute...like seriously society needs to figure it out #PrayForOttawa,0,6,0
 524934897367285760,To those asking - yes I'm OK. Awful events here in Ottawa.,0,6,0
 525030331775463424,"Atlantic #cadet programs cancelled, other cadets advised to not wear uniform but show up in business casual. #OttawaShooting",0,6,0
@@ -391,15 +391,15 @@ id,text,label,event,pred_label
 524958516822671360,"If your first response to the #ottawashooting is to make a political point, your humanity is sadly and sorely lacking.",0,6,0
 524939347699585025,[Episode] #BTS 'War of Hormone' MV &amp; Concept Photo shooting (with Eng sub.) (http://t.co/EwS342rpl8)  #호르몬전쟁 #Hello_hello,0,6,0
 524985092343889920,I'm appalled by today's attack in Ottawa. I offer my full support to @pmharper and the Canadian people as they deal with this incident.,0,6,0
-524929559909916672,Parliament Hill is never going to be the same.,0,6,0
+524929559909916672,Parliament Hill is never going to be the same.,0,6,1
 525052976562712576,"Coverage of the Ottawa shooting, in one very revealing screenshot http://t.co/CE8bvaKO8F http://t.co/GqOHyg0tUD",0,6,0
 524954161054756864,"Simply shocked at what's unfolding in Canada's capital. Thinking of you, Ottawa.",0,6,0
 524946461621235712,RAW VIDEO War Memorial shooting. http://t.co/c9wCpS2Af9 #cbcnews,0,6,0
 525026066944262144,"Anyone with photos or videos from today's shootings, send to @RCMP_Nat_Div at this link http://t.co/srCYMTL2tX #ottawa",0,6,0
 524939818347028480,Alert thru press gallery email: RCMP advises if u r in downtown Ottawa to stay away from windows &amp; off roofs due to ongoing police incident,0,6,0
-524964166936068097,Public servants being asked to stay inside their buildings as the active shooter investigation continues in Ottawa. #cbcOTT# OTTnews,0,6,1
+524964166936068097,Public servants being asked to stay inside their buildings as the active shooter investigation continues in Ottawa. #cbcOTT# OTTnews,0,6,0
 524979881525137409,Image from @kellyhobson shows police running to search buildings in downtown Ottawa. http://t.co/lLtW5skkJe,0,6,0
-524950159160250368,JUST IN: White House official: Pres. Obama has been briefed on shooting incidents in Canadian capital - @marykbruce,0,6,0
+524950159160250368,JUST IN: White House official: Pres. Obama has been briefed on shooting incidents in Canadian capital - @marykbruce,0,6,1
 524970444156571648,Our thoughts are with our friends in Ottawa. Stay safe everyone.,0,6,0
 524977767688200192,"UPDATE: #uOttawa courses + exams officially cancelled for the whole day. Lockdown still in effect. Stay indoors, stay safe #Ottawa #ottcity",0,6,0
 524956007324082177,Doors barricaded RT @grahamctv: Shot from inside caucus room after shooting @ctvottawa #ottawashooting. http://t.co/OpERH3GiMu,0,6,0
