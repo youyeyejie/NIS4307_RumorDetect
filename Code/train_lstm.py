@@ -29,6 +29,8 @@ model_parameter = f'embedding_{EMBEDDING_DIM}_hidden_{HIDDEN_DIM}_epoch_{EPOCHS}
 model_path = f'../Output/Model/{model_parameter}.pt'
 vocab_path = '../Output/Model/vocab.pkl'
 train_path = '../dataset/split/train.csv'
+ex_train_1_path = 'D:/vscode/codefield/NIS4307/nis4307_rumordetect/Dataset/split/ex_train_1.csv'  # 新增训练集1
+ex_train_2_path = 'D:/vscode/codefield/NIS4307/nis4307_rumordetect/Dataset/split/ex_train_2.csv'  # 新增训练集2
 val_path = '../dataset/split/val.csv'
 test_path = '../dataset/test/test.csv'
 graph_path = f'../Output/Graph/{model_parameter}.png'
@@ -187,7 +189,72 @@ class AdvancedBiLSTM(nn.Module):
         
         # 分类器
         return self.classifier(context).squeeze(1)
+
+# class AdvancedBiLSTM(nn.Module):
+#     def __init__(self, vocab_size, embedding_dim, hidden_dim, num_layers=2, dropout=0.5):
+#         super().__init__()
+#         self.embedding = nn.Embedding(vocab_size, embedding_dim, padding_idx=0)
+#         self.embedding_dropout = nn.Dropout(dropout)
         
+#         # 双向LSTM
+#         self.lstm = nn.LSTM(
+#             embedding_dim,
+#             hidden_dim,
+#             num_layers=num_layers,
+#             bidirectional=True,
+#             batch_first=True,
+#             dropout=dropout if num_layers > 1 else 0
+#         )
+        
+#         # 多尺度CNN提取局部特征
+#         self.convs = nn.ModuleList([
+#             nn.Conv1d(in_channels=hidden_dim*2, out_channels=64, kernel_size=k, padding=k//2)
+#             for k in [1, 3, 5]
+#         ])
+        
+#         # 注意力机制
+#         self.attention = nn.Sequential(
+#             nn.Linear(hidden_dim*2, 128),
+#             nn.Tanh(),
+#             nn.Dropout(dropout),
+#             nn.Linear(128, 1)
+#         )
+        
+#         # 分类器
+#         self.classifier = nn.Sequential(
+#             nn.Linear(hidden_dim*2 + 64*3, 128),
+#             nn.ReLU(),
+#             nn.LayerNorm(128),
+#             nn.Dropout(dropout),
+#             nn.Linear(128, 1)
+#         )
+
+#     def forward(self, x):
+#         # Embedding
+#         emb = self.embedding_dropout(self.embedding(x))  # [batch, seq_len, emb_dim]
+        
+#         # BiLSTM
+#         lstm_out, _ = self.lstm(emb)  # [batch, seq_len, hidden_dim*2]
+        
+#         # CNN特征
+#         cnn_in = lstm_out.transpose(1, 2)  # [batch, hidden_dim*2, seq_len]
+#         cnn_outs = [torch.relu(conv(cnn_in)) for conv in self.convs]
+#         cnn_pooled = [torch.max_pool1d(out, kernel_size=out.size(2)).squeeze(2) for out in cnn_outs]
+#         cnn_features = torch.cat(cnn_pooled, dim=1)  # [batch, 64*3]
+        
+#         # 注意力机制
+#         attn_scores = self.attention(lstm_out).squeeze(-1)
+#         mask = x.eq(0)
+#         attn_scores = attn_scores.masked_fill(mask, -1e9)
+#         attn_weights = torch.softmax(attn_scores, dim=1)
+#         context = torch.bmm(attn_weights.unsqueeze(1), lstm_out).squeeze(1)  # [batch, hidden_dim*2]
+        
+#         # 合并特征
+#         combined = torch.cat([context, cnn_features], dim=1)
+        
+#         # 分类
+#         return self.classifier(combined).squeeze(1)
+            
 def evaluate(model, loader):
     # 评估函数，返回准确率、精确率、召回率和F1分数
     model.eval()
@@ -254,7 +321,15 @@ def main():
     # 读取数据集
     print("正在加载数据...")
     train_df = pd.read_csv(train_path)
+    ex_train_1_df = pd.read_csv(ex_train_1_path)  # 读取新增训练集1
+    ex_train_2_df = pd.read_csv(ex_train_2_path)  # 读取新增训练集2
+    print(f"ex1训练集大小: {len(ex_train_1_df)}")
+    print(f"ex2训练集大小: {len(ex_train_2_df)}")
+    print(f"原始训练集大小: {len(train_df)}")
+    train_df = pd.concat([train_df, ex_train_1_df,ex_train_2_df], ignore_index=True)
+    print(f"合并后的训练集大小: {len(train_df)}")
     val_df = pd.read_csv(val_path)
+    print(f"验证集大小: {len(val_df)}")
 
     # 构建词表
     print("正在构建词表...")
@@ -272,6 +347,9 @@ def main():
     print("正在初始化模型...")
     model = AdvancedBiLSTM(len(vocab), EMBEDDING_DIM, HIDDEN_DIM).to(DEVICE)
     optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
+    # scheduler = optim.lr_scheduler.ReduceLROnPlateau(
+    # optimizer, mode='max', factor=0.5, patience=3, verbose=True
+    # )
     criterion = nn.BCEWithLogitsLoss()
 
     # 记录训练过程指标
@@ -315,7 +393,9 @@ def main():
         val_history['recall'].append(val_rec)
         val_history['f1'].append(val_f1)
         val_history['loss'].append(val_loss)
-
+        
+        #scheduler.step(val_f1)  # 根据验证集F1分数调整学习率
+        
         print(f'Epoch {epoch+1}/{EPOCHS}')
         # 保存最佳模型
         if val_f1 > best_val_f1:

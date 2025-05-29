@@ -1,15 +1,11 @@
 name: NIS4307
 channels:
   - pytorch-lts
-  - defaults
   - conda-forge
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-  - https://repo.anaconda.com/pkgs/main
-  - https://repo.anaconda.com/pkgs/r
-  - https://repo.anaconda.com/pkgs/msys2
+  - defaults
 dependencies:
   - blas=1.0=mkl
   - bottleneck=1.3.7=py38h9128911_0
@@ -19,6 +15,8 @@ dependencies:
   - ca-certificates=2025.4.26=h4c7d964_0
   - certifi=2024.8.30=py38haa95532_0
   - charset-normalizer=3.3.2=pyhd3eb1b0_0
+  - click=8.1.7=win_pyh7428d3b_0
+  - colorama=0.4.6=pyhd8ed1ab_0
   - contourpy=1.0.5=py38h59b6b97_0
   - cudatoolkit=11.1.1=hb074779_11
   - cycler=0.11.0=pyhd3eb1b0_0
@@ -47,8 +45,8 @@ dependencies:
   - libwebp-base=1.3.0=hcfcfb64_0
   - libxml2=2.10.4=hc3477c8_0
   - libzlib=1.2.13=hcfcfb64_4
-  - matplotlib=3.7.2=py38haa95532_0
-  - matplotlib-base=3.7.2=py38h4ed8f06_0
+  - matplotlib=3.2.2=1
+  - matplotlib-base=3.2.2=py38hbe5506b_1
   - mkl=2023.1.0=h6b88ed4_46358
   - mkl-devel=2018.0.1=h470d631_5
   - mkl-include=2024.2.2=h66d3029_15
@@ -56,12 +54,14 @@ dependencies:
   - mkl_fft=1.3.8=py38h2bbff1b_0
   - mkl_random=1.2.4=py38h59b6b97_0
   - ninja=1.11.1=h91493d7_0
+  - nltk=3.9.1=pyhd8ed1ab_0
   - numexpr=2.8.4=py38h7b80656_1
   - numpy=1.24.3=py38h79a8e48_1
   - numpy-base=1.24.3=py38h8a87ada_1
+  - olefile=0.47=pyhd8ed1ab_0
   - openssl=1.1.1w=h2bbff1b_0
   - packaging=24.1=py38haa95532_0
-  - pandas=1.5.3=py38hf11a4ad_0
+  - pandas=2.0.1=py38hf08cf0d_0
   - pip=24.2=py38haa95532_0
   - platformdirs=3.10.0=py38haa95532_0
   - pooch=1.7.0=py38haa95532_0
@@ -76,6 +76,7 @@ dependencies:
   - pytorch=1.8.2=py3.8_cuda11.1_cudnn8_0
   - pytz=2024.1=py38haa95532_0
   - qt=5.9.7=vc14h73c81de_0
+  - regex=2023.5.5=py38h91455d4_0
   - requests=2.32.3=py38haa95532_0
   - scikit-learn=1.3.0=py38h4ed8f06_1
   - scipy=1.10.1=py38hdcfc7df_1
@@ -87,8 +88,8 @@ dependencies:
   - threadpoolctl=3.5.0=py38h9909e9c_0
   - tk=8.6.12=h8ffe710_0
   - torchaudio=0.8.2=py38
-  - torchvision=0.9.2=py38_cu111
   - tornado=6.4.1=py38h827c3e9_0
+  - tqdm=4.67.1=pyhd8ed1ab_0
   - typing_extensions=4.12.2=pyha770c72_0
   - ucrt=10.0.22621.0=h57928b3_1
   - unicodedata2=15.1.0=py38h2bbff1b_0
@@ -103,4 +104,4 @@ dependencies:
   - zstd=1.5.2=h12be248_6
   - pip:
       - pillow==10.4.0
-prefix: D:\Miniconda3\envs\NIS4307
+prefix: D:\_miniconda\miniconda\envs\NIS4307
