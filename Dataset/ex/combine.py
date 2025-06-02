@@ -39,8 +39,8 @@ df_train = df_train[~df_train.index.isin(df_val.index) & ~df_train.index.isin(df
 # 保存结果
 df_train.to_csv('../split/ex_train.csv', index=False)
 df_val.to_csv('../split/ex_val.csv', index=False)
-df_test_in.to_csv('../test/ex_test_in_expected.csv', index=False)
-df_test_out.to_csv('../test/ex_test_out_expected.csv', index=False)
+df_test_in.to_csv('../test/test_in_expected.csv', index=False)
+df_test_out.to_csv('../test/test_out_expected.csv', index=False)
 print(f"训练集行数: {len(df_train)}")
 print(f"验证集行数: {len(df_val)}")
 print(f"同源测试集行数: {len(df_test_in)}")
@@ -50,5 +50,5 @@ print(f"总行数: {len(df_train) + len(df_val) + len(df_test_in) + len(df_test_
 # 删除测试集的label列并保存
 df_test_in = df_test_in.drop(columns=['label'])
 df_test_out = df_test_out.drop(columns=['label'])
-df_test_in.to_csv('../test/ex_test_in.csv', index=False)
-df_test_out.to_csv('../test/ex_test_out.csv', index=False)
+df_test_in.to_csv('../test/test_in.csv', index=False)
+df_test_out.to_csv('../test/test_out.csv', index=False)
