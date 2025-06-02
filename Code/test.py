@@ -12,7 +12,7 @@ from classify import RumourDetectClass
 detector = RumourDetectClass.construct_detector()
 
 
-test_path = '../dataset/test/test_in.csv'
+test_path = '../dataset/test/test_out.csv'
 predict_path = test_path.replace('.csv', '_predictions.csv')
 expected_path = test_path.replace('.csv', '_expected.csv')
 

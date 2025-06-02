@@ -6,6 +6,7 @@
 \usepackage{threeparttablex} % 三段表格
 \usepackage[ruled,vlined,linesnumbered]{algorithm2e} % 算法
 \usepackage{listings} % 代码高亮
+\usepackage{minted} % 代码高亮
 \lstdefinestyle{lstStyleCode}{%
     aboveskip         = \medskipamount, % 上间距
     belowskip         = \medskipamount, % 下间距
@@ -17,7 +18,11 @@
     upquote           = true, % 反引号
     tabsize           = 4, % tab大小
     showstringspaces  = false, % 显示字符串空格
-    xleftmargin       = 1em, % 左间距
+    numbers           = left, % 行号位置：left/right/none
+    numberstyle       = \small\ttfamily, % 行号字体样式
+    stepnumber        = 1, % 行号间隔
+    numbersep         = 15pt, % 行号与代码的距离
+    xleftmargin       = 2em, % 左间距
     xrightmargin      = 1em, % 右间距
     breaklines        = true, % 自动换行
     framexleftmargin  = 1em, % 左边框间距
@@ -30,7 +35,4 @@
 }
 \lstnewenvironment{codeblock}[1][]{%
     \lstset{style=lstStyleCode,#1}}{}
-\usepackage[colorlinks,linkcolor=black,urlcolor=blue]{hyperref} % 超链接
-
-\usepackage{anyfontsize} % 字体大小
-\renewcommand\normalsize{\fontsize{12pt}{18pt}\selectfont}
+\usepackage[colorlinks,linkcolor=black,urlcolor=blue, citecolor=blue]{hyperref} % 超链接

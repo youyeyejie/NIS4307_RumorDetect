@@ -8,12 +8,8 @@ import pandas as pd
 from model import AdvancedBiLSTM3 as AdvancedBiLSTM 
 from train_lstm import *
 
-MAX_LEN = 64  # 文本最大长度
-DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')  # 设备选择
-
-
 class RumourDetectClass:
-    def __init__(self, model_path,vocab_path,EMBEDDING_DIM=128, HIDDEN_DIM=256,  DEVICE=None):
+    def __init__(self, model_path, vocab_path, EMBEDDING_DIM=128, HIDDEN_DIM=256, DEVICE=None):
         # 加载词表和模型参数
         self.vocab = joblib.load(vocab_path)
         self.model = AdvancedBiLSTM(len(self.vocab), EMBEDDING_DIM, HIDDEN_DIM).to(DEVICE)

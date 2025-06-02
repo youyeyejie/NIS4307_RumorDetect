@@ -14,20 +14,30 @@
 
 我们需要在接口类文件classify.py中实现接口类RumourDetectClass，该类对外提供一个接口函数classify，该函数接收一条字符串作为输入，输出一个int值作为对应的预测类别。该类共包含以下方法：
 \begin{itemize}
-    \item \verb|__init__(self, model_path)|: 初始化，加载词表和模型参数
-    \item \verb|preprocess(self, text)|: 对输入文本进行预处理
-    \item \verb|classify(self, text: str) -> int|: 对输入文本进行预测，返回预测结果
+    \item \verb|__init__(self, model_path, vocab_path, EMBEDDING_DIM = 128, |\\
+    \verb|HIDDEN_DIM = 256, DEVICE = NONE)|: 初始化，加载指定词表和模型参数
+    \item \verb|construct_detector(self)|: 无参数快速构建谣言检测器，加载默认模型和词表
+    \item \verb|classify(self, text)|: 对输入文本进行预测，返回预测结果
 \end{itemize}
 
 \chapter{具体内容}
 
 \section{实施方案}
 
-在经过小组成员的讨论后，我们决定使用双向门控循环单元（BiGRU）模型开展谣言检测任务。该模型凭借神经网络的自动特征学习能力，无需人工设计文本特征，可直接从词语序列中提取语义特征，精准捕捉文本中的上下文依赖关系。相较于老师提供的另一种方法逻辑回归，BiGRU 模型具备以下显著优势：BiGRU模型可以同时捕捉文本的前向和后向上下文，进一步提升语义理解能力，尤其适用于分析谣言中常见的逻辑矛盾或因果关系表述；此外，BiGRU模型通过词嵌入层和循环神经网络结构，自动学习不同领域谣言数据的潜在特征分布，适应不同领域的谣言数据集，具有更好的泛化能力和鲁棒性。
+在经过小组成员的讨论后，我们决定采用改进型双向长短时记忆网络（AdvancedBiLSTM3）模型开展谣言检测任务。该模型在传统BiLSTM基础上，结合了注意力机制、Dropout正则化和LayerNorm等技术，能够更好地捕捉文本的上下文依赖关系，并有效缓解过拟合问题。具体改进如下：
+
+\begin{itemize}
+    \item \textbf{嵌入层与Dropout：} 在词嵌入层后增加Dropout，有效防止特征过拟合。
+    \item \textbf{简化LSTM结构：} 采用双向LSTM，隐藏层维度减半后拼接，保持总输出维度不变，层数限制为2层，提升模型效率。
+    \item \textbf{注意力机制：} 引入带有中间层和Dropout的注意力机制，突出关键信息，提升模型对长文本的理解能力，并对padding部分进行mask处理，避免无效信息干扰。
+    \item \textbf{分类器正则化：} 分类器部分加入多层Dropout和LayerNorm，增强模型泛化能力。
+\end{itemize}
+
+与传统的BiGRU或逻辑回归模型相比，AdvancedBiLSTM3模型具备更强的特征表达能力和鲁棒性，能够自动学习文本中的复杂语义关系，适应不同领域的谣言检测任务。通过注意力机制，模型能够聚焦于文本中的关键信息片段，提升对谣言特征的捕捉能力。实验结果表明，该模型在准确率和泛化能力方面均优于传统方法。
 
 \section{核心代码分析}
 
-\subsection{训练模型train\_gru.py}
+\subsection{训练模型train\_lstm.py}
 \begin{codeblock}[language=Python]
 import re
 from train_gru import *
