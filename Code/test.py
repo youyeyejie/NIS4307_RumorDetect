@@ -1,15 +1,20 @@
 import pandas as pd
 from classify import RumourDetectClass
 
-from train_lstm import *
+# 初始化接口实例
+# from train_lstm import *
+# model_parameter = f'128_256_30_0.012'
+# model_path = f'../Output/Model/{model_parameter}.pt'
+# vocab_path = f'../Output/Model/vocab_{model_parameter}.pkl'
+# detector = RumourDetectClass(model_path, vocab_path)
+
+# 初始化接口实例
+detector = RumourDetectClass.construct_detector()
+
 
 test_path = '../dataset/test/test_in.csv'
 predict_path = test_path.replace('.csv', '_predictions.csv')
 expected_path = test_path.replace('.csv', '_expected.csv')
-
-# 初始化接口实例
-detector = RumourDetectClass.construct_detector()
-detector = RumourDetectClass(model_path, vocab_path, EMBEDDING_DIM, HIDDEN_DIM, DEVICE)
 
 # 读取测试数据（假设test.csv包含'text'列）
 test_data = pd.read_csv(test_path)
