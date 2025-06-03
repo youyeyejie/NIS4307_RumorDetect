@@ -13,8 +13,6 @@ detector = RumourDetectClass.construct_detector()
 
 
 test_path = '../dataset/test/test_out.csv'
-predict_path = test_path.replace('.csv', '_predictions.csv')
-expected_path = test_path.replace('.csv', '_expected.csv')
 
 # 读取测试数据（假设test.csv包含'text'列）
 test_data = pd.read_csv(test_path)
@@ -29,11 +27,10 @@ for text in test_texts:
 
 # 保存结果到DataFrame
 test_data['pred_label'] = predictions
-test_data.to_csv(predict_path, index=False)
-print(f"预测完成，结果已保存至{predict_path}")
+test_data.to_csv(test_path, index=False)
+print(f"预测完成，结果已保存至{test_path}")
 
-expected = pd.read_csv(expected_path)
-total = len(expected)
-correct = (test_data['pred_label'] == expected['label']).sum()
+total = len(test_data)
+correct = (test_data['pred_label'] == test_data['label']).sum()
 accuracy = correct / total
 print(f"预测准确率: {accuracy:.2%} ({correct}/{total})")
