@@ -12,6 +12,7 @@ import numpy as np
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
 from model import AdvancedBiLSTM3 as AdvancedBiLSTM
+import time
 
 # 设置随机种子确保结果可复现
 torch.manual_seed(42)
@@ -23,7 +24,7 @@ EMBEDDING_DIM = 128     # 嵌入维度(可修改)
 HIDDEN_DIM = 256        # 隐藏层维度(可修改)
 EPOCHS = 30             # 训练轮数(可修改)
 MAX_LEN = 64            # 文本最大长度
-LEARNING_RATE = 0.9e-2    # 学习率(可修改)
+LEARNING_RATE = 0.9e-2  # 学习率(可修改)
 FACTOR = 0.9            # 学习率衰减因子
 WEIGHT_DECAY = 1e-4     # L2正则化
 DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')  # 设备选择
@@ -200,6 +201,7 @@ def main():
         'loss': [], 'accuracy': [], 'precision': [], 'recall': [], 'f1': []
     }
 
+    train_start_time = time.time()
     print("开始训练模型...")
     # 训练模型
     best_val_f1 = 0.0
@@ -247,8 +249,11 @@ def main():
         print(f'验证集: Loss={val_loss:.4f}, Acc={val_acc:.4f}, Prec={val_prec:.4f}, Rec={val_rec:.4f}, F1={val_f1:.4f}')
         print('-' * 60)
     
+    train_end_time = time.time()
     print("\n训练完成!")
-    
+    total_seconds = int(train_end_time - train_start_time)
+    minutes, seconds = divmod(total_seconds, 60)
+    print(f"总训练时间: {minutes}分{seconds}秒")
     # 绘制学习曲线
     plot_learning_curve(train_history, val_history, EPOCHS, graph_path)
     

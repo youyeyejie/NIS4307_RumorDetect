@@ -5,38 +5,18 @@ from torch.utils.data import Dataset, DataLoader
 import pandas as pd
 from collections import Counter
 import re
-import joblib
-import matplotlib.pyplot as plt
-from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix, classification_report
-import numpy as np
-from nltk.tokenize import word_tokenize
-from nltk.stem import PorterStemmer
-
-# 设置随机种子确保结果可复现
-torch.manual_seed(42)
-np.random.seed(42)
 
 # 超参数设置
 BATCH_SIZE = 32
 EMBEDDING_DIM = 100
 HIDDEN_DIM = 128
-EPOCHS = 30
+EPOCHS = 10
 MAX_LEN = 64
 DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 # 简单分词器
-# def tokenize(text):
-#     return re.findall(r'\w+', text.lower())
-
 def tokenize(text):
-    # 处理URL和@提及
-    text = re.sub(r'http\S+', '<URL>', text)
-    text = re.sub(r'@\w+', '@USER', text)
-    
-    # 使用NLTK分词+词干提取
-    tokens = word_tokenize(text)
-    stemmer = PorterStemmer()
-    return [stemmer.stem(w.lower()) for w in tokens if w.isalpha()]
+    return re.findall(r'\w+', text.lower())
 
 # 构建词表
 def build_vocab(texts, min_freq=2):
@@ -107,10 +87,8 @@ def evaluate(model, loader):
 def main():
     # 读取数据集
     train_df = pd.read_csv('../dataset/split/train.csv')
-    ex_train_1_df = pd.read_csv('../Dataset/split/ex_train_1.csv')  # 读取新增训练集1
-    ex_train_2_df = pd.read_csv('../Dataset/split/ex_train_2.csv')  # 读取新增训练集2
     val_df = pd.read_csv('../dataset/split/val.csv')
-    train_df = pd.concat([train_df,ex_train_1_df,ex_train_2_df], ignore_index=True)
+
     # 构建词表
     vocab = build_vocab(train_df['text'])
     # 构建数据集
