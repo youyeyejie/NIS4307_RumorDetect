@@ -21,11 +21,11 @@ df_all = df_all.sort_values('id')
 # 输出合并后的数据行数
 print(f"去重和排序后的数据行数: {len(df_all)}")
 
-# 指定以这些数字开头的id前缀
-prefixes = ['524', '544', '580', '581', '529', '499', '500', '498', '536']
+# 指定event
+event = ['gurlitt-all-rnr-threads', '544', '580', '581', '529', '499', '500', '498', '536']
 
-# 提取以指定前缀开头的条目到df_test
-df_test_in = df_all[df_all['id'].astype(str).str.startswith(tuple(prefixes))]
+# 提取指定event的数据
+df_test_in = df_all[df_all['event'].isin(event)]
 
 # 剩余的为df_train
 df_train = df_all[~df_all['id'].isin(df_test_in['id'])]
