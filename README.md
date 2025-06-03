@@ -9,7 +9,7 @@ rumour_detector/
 ├── Code/               # Python 代码
 ├── Dataset/            # 数据集
 │   ├── split/          # 训练集、验证集
-│   ├── ex/             # 额外训练集、验证集
+│   ├── ex/             # 额外数据集
 │   └── test/           # 测试集
 ├── Docs/               # 项目文档
 ├── Output/             # 输出
@@ -32,6 +32,16 @@ conda env create -f environment.yml
 conda activate NIS4307
 ```
 
+## Training
+本项目使用 BiLSTM 模型进行谣言检测。模型训练代码位于 `Code/train_lstm.py` 文件中，可以修改其中的参数配置模型参数。运行以下命令开始训练模型：
+```bash
+python Code/train_lstm.py
+```
+另提供批量测试脚本 `Code/test.py`，可以对测试集进行批量预测。测试时需要在文件中配置训练集路径，运行以下命令开始批量测试：
+```bash
+python Code/test.py
+```
+
 ## Interface
 本项目提供调用接口类文件 [`classify.py`](Code/classify.py)，可以直接调用该文件中的 `RumourDetectClass` 类进行谣言检测。该类的使用方法如下：
 
@@ -45,6 +55,7 @@ detector = RumourDetectClass.construct_detector()
 # detector = RumourDetectClass(model_path, vocab_path, EMBEDDING_DIM, HIDDEN_DIM, DEVICE)
 # 调用 classify 方法进行预测
 pred = detector.classify("待检测的文本内容")
+print(f"预测结果: {pred}")
 # pred 将返回一个整数，0 表示非谣言，1 表示谣言
 ```
 批量预测示例:
@@ -57,15 +68,11 @@ from classify import RumourDetectClass
 # model_path = f'../Output/Model/{model_parameter}.pt'
 # vocab_path = f'../Output/Model/vocab_{model_parameter}.pkl'
 
-test_path = '../dataset/test/test_in.csv'
-predict_path = test_path.replace('.csv', '_predictions.csv')
-expected_path = test_path.replace('.csv', '_expected.csv')
-
 # 初始化接口实例
 detector = RumourDetectClass.construct_detector()
-# detector = RumourDetectClass(model_path, vocab_path, EMBEDDING_DIM, HIDDEN_DIM, DEVICE)
 
 # 读取测试数据（假设test.csv包含'text'列）
+test_path = '../dataset/test/test.csv'
 test_data = pd.read_csv(test_path)
 test_texts = test_data['text'].tolist()
 
@@ -78,12 +85,11 @@ for text in test_texts:
 
 # 保存结果到DataFrame
 test_data['pred_label'] = predictions
-test_data.to_csv(predict_path, index=False)
-print(f"预测完成，结果已保存至{predict_path}")
+test_data.to_csv(test_path, index=False)
+print(f"预测完成，结果已保存至{test_path}")
 
-expected = pd.read_csv(expected_path)
-total = len(expected)
-correct = (test_data['pred_label'] == expected['label']).sum()
+total = len(test_data)
+correct = (test_data['pred_label'] == test_data['label']).sum()
 accuracy = correct / total
 print(f"预测准确率: {accuracy:.2%} ({correct}/{total})")
 ```
@@ -93,13 +99,3 @@ print(f"预测准确率: {accuracy:.2%} ({correct}/{total})")
 - [李卓恒](mailto:lzhsj32206@sjtu.edu.cn)
 - [刘梓芃](mailto:liuzipeng@sjtu.edu.cn)
 - [聂鸣涛](mailto:niemingtao@sjtu.edu.cn)
-
-<!-- ## RUN
-
-```bash
-# 训练模型
-python train_lstm.py --embedding_dim 128 --hidden_dim 256 --epochs 20 --lr 0.005
-# 调用接口 后面为模型参数
-python classify.py --embedding_dim 128 --hidden_dim 256 --epochs 20 --lr 0.005
-``` -->
-

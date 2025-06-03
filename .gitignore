@@ -1,1 +1,7 @@
 Code/__pycache__/
+Report/*.aux
+Report/*.fdb_latexmk
+Report/*.fls
+Report/*.log
+Report/*.out
+Report/*.toc
