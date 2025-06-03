@@ -34,9 +34,9 @@ model_parameter = f'{EMBEDDING_DIM}_{HIDDEN_DIM}_{EPOCHS}_{LEARNING_RATE}'
 model_path = f'../Output/Model/{model_parameter}.pt'
 vocab_path = f'../Output/Model/vocab_{model_parameter}.pkl'
 train_path = '../Dataset/split/train.csv'
-ex_train_1_path = '../Dataset/split/ex_train_1.csv'  # 新增训练集1
-ex_train_2_path = '../Dataset/split/ex_train_2.csv'  # 新增训练集2
+ex_train_path = '../Dataset/split/ex_train.csv'  # 新增训练集1
 val_path = '../dataset/split/val.csv'
+ex_val_path = '../dataset/split/ex_val.csv'
 test_path = '../dataset/test/test.csv'
 graph_path = f'../Output/Graph/{model_parameter}.png'
 
@@ -158,15 +158,18 @@ def main():
     # 读取数据集
     print("正在加载数据...")
     train_df = pd.read_csv(train_path)
-    ex_train_1_df = pd.read_csv(ex_train_1_path)  # 读取新增训练集1
-    ex_train_2_df = pd.read_csv(ex_train_2_path)  # 读取新增训练集2
-    print(f"ex1训练集大小: {len(ex_train_1_df)}")
-    print(f"ex2训练集大小: {len(ex_train_2_df)}")
+    ex_train_df = pd.read_csv(ex_train_path)  # 读取新增训练集
+    print(f"ex训练集大小: {len(ex_train_df)}")
     print(f"原始训练集大小: {len(train_df)}")
-    train_df = pd.concat([train_df,ex_train_1_df,ex_train_2_df], ignore_index=True)
+    train_df = pd.concat([train_df,ex_train_df], ignore_index=True)
     print(f"合并后的训练集大小: {len(train_df)}")
     val_df = pd.read_csv(val_path)
+    ex_val_df = pd.read_csv(ex_val_path)
     print(f"验证集大小: {len(val_df)}")
+    print(f"新增验证集大小: {len(ex_val_df)}")
+    val_df = pd.concat([val_df,ex_val_df], ignore_index=True)
+    print(f"合并后的验证集大小: {len(val_df)}")
+    
 
     # 构建词表
     print("正在构建词表...")

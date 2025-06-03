@@ -1,13 +1,14 @@
 import pandas as pd
 
 # 读取三个csv文件
-df1 = pd.read_csv('ex_train_1.csv')
-df2 = pd.read_csv('ex_train_2.csv')
+# df1 = pd.read_csv('ex_train_1.csv')
+# df2 = pd.read_csv('ex_train_2.csv')
+df_all = pd.read_csv('../ex/data.csv')
 df3 = pd.read_csv('../split/train.csv')
 
 # 合并 ex_train_1 和 ex_train_2
-df_all = pd.concat([df1, df2], ignore_index=True)
-print(f"合并后的数据行数: {len(df_all)}")
+# df_all = pd.concat([df1, df2], ignore_index=True)
+# print(f"合并后的数据行数: {len(df_all)}")
 
 # 去除 id 在 df3 中已存在的条目
 df_all = df_all[~df_all['id'].isin(df3['id'])]
@@ -30,7 +31,7 @@ df_test_in = df_all[df_all['event'].isin(event)]
 # 剩余的为df_train
 df_train = df_all[~df_all['id'].isin(df_test_in['id'])]
 
-# 从df_train中，行号mod8为1的移动到df_val，mod8为2的移动到df_test
+# 从df_train中，行号mod8为1的移动到df_val，mod8为2的移动到df_test_out
 df_train = df_train.reset_index(drop=True)
 df_val = df_train[df_train.index % 8 == 1]
 df_test_out = df_train[df_train.index % 8 == 2]
