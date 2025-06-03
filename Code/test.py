@@ -12,7 +12,7 @@ from classify import RumourDetectClass
 detector = RumourDetectClass.construct_detector()
 
 
-test_path = '../dataset/test/test_out.csv'
+test_path = '../dataset/test/test_in.csv'
 
 # 读取测试数据（假设test.csv包含'text'列）
 test_data = pd.read_csv(test_path)
