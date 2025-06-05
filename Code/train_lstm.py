@@ -13,10 +13,16 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
 from model import AdvancedBiLSTM3 as AdvancedBiLSTM
 import time
+import nltk
+try:
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    nltk.download('punkt_tab')
 
 # 设置随机种子确保结果可复现
 torch.manual_seed(42)
 np.random.seed(42)
+
 
 # 超参数设置
 BATCH_SIZE = 32         # 批大小

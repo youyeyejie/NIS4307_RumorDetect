@@ -114,6 +114,11 @@ import numpy as np
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
 from model import AdvancedBiLSTM3 as AdvancedBiLSTM
+import nltk
+try:
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    nltk.download('punkt_tab')
 
 # 超参数设置
 BATCH_SIZE = 32         # 批大小
@@ -304,7 +309,7 @@ class RumourDetectClass:
 在接口类中，我们实现了\verb|RumourDetectClass|接口类，该类提供了两个初始化方法：\verb|__init__|和\verb|construct_detector|，分别可以进行指定或默认模型和词表的初始化谣言检测器。此外还实现了一个接口函数\verb|classify|，接收一条字符串作为输入，输出一个整数值作为对应的预测类别。通过\verb|construct_detector|方法，我们可以快速构建谣言检测器，加载默认模型和词表。
 
 \vspace{1em}
-本项目代码发布在\href{https://github.com/youyeyejie/NIS4307_RumorDetect.git}{GitHub} 和 \href{https://git.sjtu.edu.cn/ma_yuezhao/nis4307_rumordetect}{GitSJTU} 上，包含了数据预处理、模型训练、模型评估和接口类的完整实现。
+本项目代码发布在 \href{https://git.sjtu.edu.cn/ma_yuezhao/nis4307_rumordetect}{GitSJTU} 上，包含了数据预处理、模型训练、模型评估和接口类的完整实现。
 
 \newpage
 \section{测试结果分析}
