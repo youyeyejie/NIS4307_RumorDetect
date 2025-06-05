@@ -1,24 +1,24 @@
 \chapter{任务目标}
 
-本次课程设计的任务是基于谣言检测数据集，构建一个检测模型。该模型可以对数据集中的推文进行谣言检测与识别。要求如下：
+本次课程设计的任务是基于谣言检测数据集，构建一个检测模型。该模型可以对数据集中的推文进行谣言检测与识别。任务目标如下：
 \begin{itemize}
     \item 数据集：使用给定的谣言检测数据集，数据集包含推文文本和标签（谣言或非谣言）。
-    \item 训练模型：使用逻辑回归或GRU等深度学习模型进行谣言检测，实现二分类任务，
-    用0代表非谣言、1代表谣言
+    \item 模型训练：使用逻辑回归或GRU等深度学习模型进行谣言检测，实现二分类任务，用0代表非谣言、1代表谣言。
+    \item 模型评估：使用测试集对模型进行评估，计算分类准确率、精确率、召回率和F1分数等指标。
+    \item 模型接口：实现一个接口类，提供谣言检测功能，对外提供一个接口函数，接收一条字符串作为输入，输出一个整数值作为对应的预测类别。
     \item 泛化能力：模型应具有较好的泛化能力，能够适应不同类型的谣言检测任务。
-    \item 评估指标：分类准确率、运行时间等
     \item 结果可视化：对模型训练结果进行可视化展示。
 \end{itemize}
 
-\vspace{1em}
+% \vspace{1em}
 
-我们需要在接口类文件classify.py中实现接口类RumourDetectClass，该类对外提供一个接口函数classify，该函数接收一条字符串作为输入，输出一个int值作为对应的预测类别。该类共包含以下方法：
-\begin{itemize}
-    \item \verb|__init__(self, model_path, vocab_path, EMBEDDING_DIM = 128, |\\
-    \verb|HIDDEN_DIM = 256, DEVICE = NONE)|: 初始化，加载指定词表和模型参数
-    \item \verb|construct_detector(self)|: 无参数快速构建谣言检测器，加载默认模型和词表
-    \item \verb|classify(self, text)|: 对输入文本进行预测，返回预测结果
-\end{itemize}
+% 我们需要在接口类文件classify.py中实现接口类RumourDetectClass，该类对外提供一个接口函数classify，该函数接收一条字符串作为输入，输出一个int值作为对应的预测类别。该类共包含以下方法：
+% \begin{itemize}
+%     \item \verb|__init__(self, model_path, vocab_path, EMBEDDING_DIM = 128, |\\
+%     \verb|HIDDEN_DIM = 256, DEVICE = NONE)|: 初始化，加载指定词表和模型参数
+%     \item \verb|construct_detector(self)|: 无参数快速构建谣言检测器，加载默认模型和词表
+%     \item \verb|classify(self, text)|: 对输入文本进行预测，返回预测结果
+% \end{itemize}
 
 \chapter{具体内容}
 
@@ -44,14 +44,14 @@
     \item \textbf{分类器}：包含多层全连接网络，使用\verb|ReLU|激活函数和\verb|LayerNorm|归一化，最终通过\verb|sigmoid|函数输出二分类结果，即以0表示非谣言，1表示谣言。
 \end{itemize}
 
-\vspace{1em}
-模型训练过程中，我们采用以下策略：
-\begin{itemize}
-    \item \textbf{优化器}：使用Adam优化器，初始学习率\verb|LEARNING_RATE=0.009|，结合学习率衰减策略（\verb|ReduceLROnPlateau|），当验证集F1分数不再提升时，学习率按因子\verb|FACTOR=0.9|衰减，衰减耐心值为3轮。
-    \item \textbf{损失函数}：采用\verb|BCEWithLogitsLoss|（二元交叉熵损失），内置\verb|sigmoid|激活，支持批量二分类任务。
-    \item \textbf{正则化}：为防止模型过拟合，增加权重衰减\verb|WEIGHT_DECAY=1e-4|，并结合多层\verb|Dropout|在嵌入层、LSTM层和全连接层中进行正则化。
-    \item \textbf{数据增强}：合并原始训练集与新增训练集，总训练样本量提升至约5500条数据，验证集同步合并以增强泛化性。
-\end{itemize}  
+% \vspace{1em}
+% 模型训练过程中，我们采用以下策略：
+% \begin{itemize}
+%     \item \textbf{优化器}：使用Adam优化器，初始学习率\verb|LEARNING_RATE=0.009|，结合学习率衰减策略（\verb|ReduceLROnPlateau|），当验证集F1分数不再提升时，学习率按因子\verb|FACTOR=0.9|衰减，衰减耐心值为3轮。
+%     \item \textbf{损失函数}：采用\verb|BCEWithLogitsLoss|（二元交叉熵损失），内置\verb|sigmoid|激活，支持批量二分类任务。
+%     \item \textbf{正则化}：为防止模型过拟合，增加权重衰减\verb|WEIGHT_DECAY=1e-4|，并结合多层\verb|Dropout|在嵌入层、LSTM层和全连接层中进行正则化。
+%     \item \textbf{数据增强}：合并原始训练集与新增训练集，总训练样本量提升至约5500条数据，验证集同步合并以增强泛化性。
+% \end{itemize}  
 
 \vspace{1em}
 与传统的BiGRU或逻辑回归模型相比，AdvancedBiLSTM3模型具备更强的特征表达能力和鲁棒性，能够自动学习文本中的复杂语义关系，适应不同领域的谣言检测任务。通过注意力机制，模型能够聚焦于文本中的关键信息片段，提升对谣言特征的捕捉能力。在对比不同策略的训练成果后，我们发现该模型在准确率和泛化能力方面均优于传统方法，具体的实验结果将在后续章节中详细展示。
@@ -266,7 +266,7 @@ if __name__ == '__main__':
     main()
 \end{codeblock}
 
-在训练模型的代码中，我们首先定义了超参数和路径设置，接着使用\verb|tokenize|函数对文本进行分词和预处理，\verb|build_vocab|函数构建词表，并将其保存到指定路径。然后，我们定义了自定义数据集类\verb|RumorDataset|，用于加载和处理数据。接下来，我们初始化模型、优化器和损失函数，并记录训练过程中的指标。通过循环迭代训练数据，计算损失并更新模型参数，同时在每一轮训练结束后评估模型在验证集上的性能。最终，我们将最佳模型参数保存到指定路径，并绘制学习曲线。
+在训练模型的代码中，我们首先定义了超参数和路径设置，接着使用\verb|tokenize|函数对文本进行分词和预处理，\verb|build_vocab|函数构建词表，并将其保存到指定路径。然后，我们定义了自定义数据集类\verb|RumorDataset|，用于加载和处理数据。接下来，我们初始化模型、优化器和损失函数，并记录训练过程中的指标。通过循环迭代训练数据，计算损失并更新模型参数，同时在每一轮训练结束后评估模型在验证集上的性能。
 
 \vspace{1em}
 \subsection{接口类定义classify.py}
