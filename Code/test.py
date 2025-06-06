@@ -2,24 +2,25 @@ import pandas as pd
 from classify import RumourDetectClass
 
 # 初始化接口实例
-# from train_lstm import *
 # model_parameter = f'128_256_30_0.009'
 # model_path = f'../Output/Model/best_{model_parameter}.pt'
-# vocab_path = f'../Output/Model/vocab_{model_parameter}.pkl'
+# vocab_path = f'../Output/Vocab/{model_parameter}.pkl'
 # detector = RumourDetectClass(model_path, vocab_path)
 
 # 初始化接口实例
 detector = RumourDetectClass.construct_detector()
 
 
-test_in = '../dataset/test/test_in.csv'
-test_out = '../dataset/test/test_out.csv'
-
 # 读取测试数据（假设test.csv包含'text'列）
+test_in = '../Dataset/test/test_in.csv'
+test_out = '../Dataset/test/test_out.csv'
 test_in_data = pd.read_csv(test_in)
 test_out_data = pd.read_csv(test_out)
 # 合并测试数据
 test_data = pd.concat([test_in_data, test_out_data], ignore_index=True)
+
+# 如果只有一个文件，可以直接读取
+# test_data = pd.read_csv('../Dataset/test/test.csv')
 test_texts = test_data['text'].tolist()
 
 # 批量预测
@@ -37,8 +38,6 @@ id_pred_map = {
     row['id']: detector.classify(row['text']) 
     for _, row in test_data.iterrows()
 }
-
-# 3. 直接赋值（比 merge 简单 10 倍！）
 test_in_data['pred_label'] = test_in_data['id'].map(id_pred_map)
 test_out_data['pred_label'] = test_out_data['id'].map(id_pred_map)
 test_in_data.to_csv(test_in, index=False)

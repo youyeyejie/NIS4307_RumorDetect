@@ -19,7 +19,7 @@ id,text,label,event,pred_label
 498616975850225664,Happening now in #Ferguson where #MikeBrown was killed. http://t.co/LfN0DWYp0B,0,ferguson-all-rnr-threads,0
 499366666300846081,Line of police cars with high beams on greets anyone trying to enter #Ferguson. It's shut down. No media allowed. http://t.co/bk6jFFM7jj,1,ferguson-all-rnr-threads,0
 499376069485821952,Next up on Fox News: Here's some footage of angry black people in #Ferguson with no discussion about why they're angry. Enjoy! #MikeBrown,0,ferguson-all-rnr-threads,0
-499381843955707904,The ferguson chief says that his feelings are hurt that ppl consider him a part of the problem. #ferguson http://t.co/VoJGrMOPbZ,1,ferguson-all-rnr-threads,0
+499381843955707904,The ferguson chief says that his feelings are hurt that ppl consider him a part of the problem. #ferguson http://t.co/VoJGrMOPbZ,1,ferguson-all-rnr-threads,1
 499412661176926209,#Ferguson crowd gone  crowd showed restraint  chanted &amp; yelled at police then left  scene now empty  only media here http://t.co/Tu2LrnSG6c,0,ferguson-all-rnr-threads,0
 499426471300329472,Prayers for #Ferguson.,0,ferguson-all-rnr-threads,0
 499431474731683841,#BREAKING One woman shot in drive-by shooting on 1300 Highmont near the QT. Cannot confirm if the victim survived. #ferguson #mikebrown,1,ferguson-all-rnr-threads,1
@@ -60,7 +60,7 @@ id,text,label,event,pred_label
 500285732578013185,It's not #MikeBrown in those #Ferguson police video stills. Not unless he changed his shoes after the robbery but before he met the officer.,1,ferguson-all-rnr-threads,1
 500285938824908801,"""Police in #Ferguson  once charged a man with destruction of property for bleeding on their uniforms while four of them allegedly beat him.""",1,ferguson-all-rnr-threads,1
 500289154581008384,so if he was with #DorianJohnson at the robbery why wasn't he in custody? All media outlets interviewed him before the police #Ferguson,1,ferguson-all-rnr-threads,1
-500289307257868288,The selective release of information by #Ferguson PD tells us nothing about the shooting. Instead appears to be a basic smear job.,1,ferguson-all-rnr-threads,0
+500289307257868288,The selective release of information by #Ferguson PD tells us nothing about the shooting. Instead appears to be a basic smear job.,1,ferguson-all-rnr-threads,1
 500290456845299714,Here's the police report. Somehow #Ferguson cops valued a box of Swishers at nearly $50. Time to stop smokin I guess http://t.co/8ZkvrHkApc,1,ferguson-all-rnr-threads,0
 500299904817049600,RT .@rolandsmartin: This is simple: IF #MikeBrown was a robbery suspect  why didn’t #Ferguson police say that on DAY ONE? Why wait six days?,1,ferguson-all-rnr-threads,1
 500302577557573632,Media  we will not allow you to spin this story to make it seem as if #MikeBrown deserved to die. Nope. We won't let it happen. #Ferguson,0,ferguson-all-rnr-threads,0
@@ -70,7 +70,7 @@ id,text,label,event,pred_label
 500318336719134720,"Captain Johnson: ""I know we're scared and I know we've fallen. But I know He's going to pick us up."" #Ferguson",0,ferguson-all-rnr-threads,0
 500336040440516608,"Family of Michael Brown slams #Ferguson police chief's ""devious"" attempt to ""blame the victim"" http://t.co/4V3uWtShQH http://t.co/GBnglBgJmo",1,ferguson-all-rnr-threads,0
 500336373833170945,#Ferguson police are embarking on what can only be described as an elaborate smear campaign of Michael Brown http://t.co/SaLZExqR1D,1,ferguson-all-rnr-threads,0
-500343812863311872,Sooooooo Chief of #Ferguson lied and said that an ambulance was on the scene? #OpFerguson @OpFerguson @YourAnonNews http://t.co/1XX6A5Mt9x,1,ferguson-all-rnr-threads,1
+500343812863311872,Sooooooo Chief of #Ferguson lied and said that an ambulance was on the scene? #OpFerguson @OpFerguson @YourAnonNews http://t.co/1XX6A5Mt9x,1,ferguson-all-rnr-threads,0
 500358061698347008,#Ferguson police chief now says that the robbery DOES NOT relate to the initial contact between Darren Wilson and Michael Brown,1,ferguson-all-rnr-threads,1
 500358655834062848,#Ferguson Police Chief: The initial contact between #DarrenWilson and #MikeBrown was NOT related to the alleged theft of cigars.,1,ferguson-all-rnr-threads,1
 500358907383275520,Why release the report about the robbery if it's not related to the contact with the cop who shot him? This all stinks. #Ferguson,1,ferguson-all-rnr-threads,1
@@ -90,7 +90,7 @@ id,text,label,event,pred_label
 524928297986433024,A reminder for those observing the shooting on Parliament Hill: DO NOT tweet police locations and movements #ottcity #ottawa,0,ottawashooting-all-rnr-threads,0
 524929559909916672,Parliament Hill is never going to be the same.,0,ottawashooting-all-rnr-threads,0
 524932292406681601,Ok so we were on a tour at that war monument in Ottawa a few minutes ago  a few seconds later there was a shooting..😳 http://t.co/yzCtBlGZ2v,0,ottawashooting-all-rnr-threads,0
-524932635177795585,Canada's Prime Minister Stephen Harper safe &amp; has left Parliament Hill  which is under lockdown after shooting http://t.co/rk4c3kcwUQ,0,ottawashooting-all-rnr-threads,0
+524932635177795585,Canada's Prime Minister Stephen Harper safe &amp; has left Parliament Hill  which is under lockdown after shooting http://t.co/rk4c3kcwUQ,0,ottawashooting-all-rnr-threads,1
 524932935137628160,The gunman in Ottawa has been shot and killed. I'm at a loss for words this morning. That isn't my Canada.,1,ottawashooting-all-rnr-threads,1
 524935769614331904,UPDATE: Reports of gunfire inside the halls of the Canadian Parliament building in #Ottawa: http://t.co/tjycT5YQcv,1,ottawashooting-all-rnr-threads,1
 524935791794221057,#OTTAWA SHOOTING: Police claim multiple suspects at large  ask people to avoid Paraliment area http://t.co/Zp9AKplH9p http://t.co/b3yQV4ewOs,1,ottawashooting-all-rnr-threads,1
@@ -108,12 +108,12 @@ id,text,label,event,pred_label
 524950455743291392,Thinking about everyone in Ottawa right now. Please be careful and stay safe until the situation is under control.,0,ottawashooting-all-rnr-threads,0
 524950584349454337,VIDEO Just on CBC NN: @globeandmail video showing shots fired inside Parliament Hill. #cdnpoli http://t.co/jT71xTmLEt http://t.co/qLQGMLA6ZT,1,ottawashooting-all-rnr-threads,1
 524953110285152256,EXTENDED VIDEO: Numerous gunshots heard inside Centre Block on Parliament Hill http://t.co/PVcAGKdahe,1,ottawashooting-all-rnr-threads,1
-524953604717686784,CANADIAN OFFICIALS NOW CALLING TODAY'S PARLIAMENT SHOOTING A TERRORIST ATTACK - http://t.co/5VYMWGWyx3 http://t.co/jQn39E7hTA,1,ottawashooting-all-rnr-threads,0
+524953604717686784,CANADIAN OFFICIALS NOW CALLING TODAY'S PARLIAMENT SHOOTING A TERRORIST ATTACK - http://t.co/5VYMWGWyx3 http://t.co/jQn39E7hTA,1,ottawashooting-all-rnr-threads,1
 524953767402553345,Latest photos from Ottawa's Parliament Hill http://t.co/ibNGJIg2Pg http://t.co/FtEukz6d9x,0,ottawashooting-all-rnr-threads,0
 524956372199555072,Map of areas where Ottawa shootings were reported: National War Memorial  near the Rideau Centre and Parliament Hill. http://t.co/NcfNCR5VCV,1,ottawashooting-all-rnr-threads,1
 524956518404198400,Sending our thoughts and prayers to everyone in #Ottawa at this difficult time. Pls follow @OttawaPolice &amp; @rcmpgrcpolice for latest info.,0,ottawashooting-all-rnr-threads,0
-524957517294886912,Gunman on the loose in downtown Ottawa. Canadian citizens disarmed by their government. Target rich environment. #OttawaShooting,1,ottawashooting-all-rnr-threads,1
-524960277348233216,RT @scottbix: Incredible shot: A woman gives mouth-to-mouth to a fallen soldier at the War Memorial http://t.co/eTlJyKBRy8 #hillshooting,0,ottawashooting-all-rnr-threads,0
+524957517294886912,Gunman on the loose in downtown Ottawa. Canadian citizens disarmed by their government. Target rich environment. #OttawaShooting,1,ottawashooting-all-rnr-threads,0
+524960277348233216,RT @scottbix: Incredible shot: A woman gives mouth-to-mouth to a fallen soldier at the War Memorial http://t.co/eTlJyKBRy8 #hillshooting,0,ottawashooting-all-rnr-threads,1
 524960851493924864,"""Just evacuated from roof of Parliament Hill Centre Block"" - @dmatthewmillar  https://t.co/R6TuyAjMTd http://t.co/7WFNBYlHIZ #OttawaShooting",0,ottawashooting-all-rnr-threads,1
 524961016904294400,Everyone in Ottawa  please stay safe. http://t.co/bQAM7B2wrh,0,ottawashooting-all-rnr-threads,0
 524965597793107968,PHOTO: Parliament Hill caucus room barricaded with furniture due to active shooter situation - http://t.co/8pVYX8s91t http://t.co/6cHBF5KsME,0,ottawashooting-all-rnr-threads,0
@@ -141,14 +141,14 @@ id,text,label,event,pred_label
 525021083892994049,Rest in peace Cpl. Nathan Cirillo via @globeandmail #ottawashooting http://t.co/voEK2MZpfR http://t.co/sMpeSGv4HY,1,ottawashooting-all-rnr-threads,1
 525022700923019264,Soldier shot dead in #Ottawa today is Cpl. Nathan Cirillo. Reservist was based in #Hamilton  Ont.,1,ottawashooting-all-rnr-threads,1
 525029954908860417,Updated: Full story on Nathan Cirillo  the soldier killed in #Ottawashooting http://t.co/znQSFJeNQf http://t.co/qM9gunIiJE,1,ottawashooting-all-rnr-threads,1
-525030331775463424,Atlantic #cadet programs cancelled  other cadets advised to not wear uniform but show up in business casual. #OttawaShooting,0,ottawashooting-all-rnr-threads,0
+525030331775463424,Atlantic #cadet programs cancelled  other cadets advised to not wear uniform but show up in business casual. #OttawaShooting,0,ottawashooting-all-rnr-threads,1
 525031558949134336,CBS reports Ottawa shooting suspect was born in Quebec as Michael Joseph Hall. He's a recent convert to Islam - http://t.co/58IK7FMcA1,1,ottawashooting-all-rnr-threads,1
 525044678765187072,When you kill because your ideology calls you to do so  you r a terrorist. No euphemism can change that.  #Terrorism is terrorism.  #Ottawa,0,ottawashooting-all-rnr-threads,0
 525045145079533568,.@pmharper and I have been speaking to some of our allies around the world. The PM will address the nation this evening. #OttawaShooting,1,ottawashooting-all-rnr-threads,0
-525045203648790528,The #OttawaShooting was #terrorsim as was #forthoodshooting and #oklahomabeheading...,0,ottawashooting-all-rnr-threads,0
+525045203648790528,The #OttawaShooting was #terrorsim as was #forthoodshooting and #oklahomabeheading...,0,ottawashooting-all-rnr-threads,1
 525055879545380864,Our thoughts are with the family and friends of Cpl. Nathan Cirillo and all those affected by the events in Ottawa today. #OttawaStrong,1,ottawashooting-all-rnr-threads,1
 525058825909731328,"The Ottawa Hospital now says ""all three patients involved in today's incident have been discharged"" http://t.co/24l1f58UPx #OttawaShootings",1,ottawashooting-all-rnr-threads,1
-525058976376193024,Our thoughts and prayers go out to Nathan Cirillo who died today in Ottawa while protecting his country at age 24 http://t.co/PfwasSALPX,1,ottawashooting-all-rnr-threads,1
+525058976376193024,Our thoughts and prayers go out to Nathan Cirillo who died today in Ottawa while protecting his country at age 24 http://t.co/PfwasSALPX,1,ottawashooting-all-rnr-threads,0
 525071376084791297,Rest in Peace  Cpl. Nathan Cirillo. Killed today in #OttawaShooting http://t.co/YzLXYX5JJt http://t.co/8F0qAcj9sg,1,ottawashooting-all-rnr-threads,1
 525071638464049152,Watch live: PM Stephen Harper expected to speak to the nation imminently on #OttawaShooting http://t.co/ypsERaEeOy @CBCNews #cdnpoli,1,ottawashooting-all-rnr-threads,0
 529399936434327552,can someone get us in 2 the secret prince show in toronto tomorrow,1,prince-toronto-all-rnr-threads,1
@@ -169,7 +169,7 @@ id,text,label,event,pred_label
 529742801274429440,"FYI #Toronto ""@LiveNationON: In response to inquiries  we can confirm that Prince will not be performing at @masseyhall tonight.""",1,prince-toronto-all-rnr-threads,1
 529778109290012673,this nigga Prince got all the unemployed middle aged/retired folk in toronto waiting in purple rain for him,1,prince-toronto-all-rnr-threads,1
 535241189234982912,Swiss museum close to accepting Gurlitt bequest  returning any Nazi-looted pieces http://t.co/q0vQkval2k via @WSJ,1,gurlitt-all-rnr-threads,1
-535270217689993216,According to psychiatric evaluation #Gurlitt not mentally fit to write will bequeathing paintings to museum http://t.co/EF3WSuyVPT,1,gurlitt-all-rnr-threads,1
+535270217689993216,According to psychiatric evaluation #Gurlitt not mentally fit to write will bequeathing paintings to museum http://t.co/EF3WSuyVPT,1,gurlitt-all-rnr-threads,0
 535952893589725184,GMLive: ArtsBeat: Cousin of Cornelius Gurlitt Challenges Will That Leaves Collection to Swiss Museum: A cousin... http://t.co/7jogktByJU,0,gurlitt-all-rnr-threads,0
 535967306799538176,Tainted #Gurlitt collection should be sold with profits going to Jewish organizations. #WWII via .@erynecki  http://t.co/DYXr982FFR,0,gurlitt-all-rnr-threads,0
 535986492879810560,Last-minute lawsuit filed by relative of Cornelius Gurlitt over Nazi-era art hoard: A relative of lat... http://t.co/MlDaJVnaH3 #artnews,0,gurlitt-all-rnr-threads,0
@@ -192,10 +192,10 @@ id,text,label,event,pred_label
 544285712653500419,Major landmarks in Sydney evacuated as police respond to hostage situation at café in city's Martin Place - @BBCNews http://t.co/iOwVqexN9m,1,sydneysiege-all-rnr-threads,1
 544286537299787777,"Heya @espn can you put ""Hostage crisis in Sydney. Islamist flag held in window"" on your crawl so Obama sees it? Thanks.",1,sydneysiege-all-rnr-threads,1
 544288856263360512,A major police operation is under way in Sydney  Australia; police advise avoiding Central Business District. http://t.co/02SVSxOrFt,0,sydneysiege-all-rnr-threads,0
-544289880805605376,The PM's office releases a statement about  #sydneysiege. http://t.co/7NdqPYhwcY http://t.co/jeYdlwywO7,1,sydneysiege-all-rnr-threads,0
+544289880805605376,The PM's office releases a statement about  #sydneysiege. http://t.co/7NdqPYhwcY http://t.co/jeYdlwywO7,1,sydneysiege-all-rnr-threads,1
 544291619084959744,BREAKINGNEWS: One of the perpetrators have demanded to speak to President Tony Abbott. Threatens to blow explosives every 30min #sydneysiege,1,sydneysiege-all-rnr-threads,0
 544296158206894081,Breaking: Sydney On Lockdown as Dramatic Siege Unfolds http://t.co/Xpjpgbf2Pb #sydneysiege http://t.co/31KmD0zuIx,1,sydneysiege-all-rnr-threads,1
-544296671950020609,From @guardian on Ray Hadley's speculative reports: #sydneysiege http://t.co/qRXKjmJZyq,1,sydneysiege-all-rnr-threads,0
+544296671950020609,From @guardian on Ray Hadley's speculative reports: #sydneysiege http://t.co/qRXKjmJZyq,1,sydneysiege-all-rnr-threads,1
 544296985910861824,Lindt Australia CEO says probably about 10 staff  30 customers in Sydney cafe at time of siege  @SkyBusiness #sydneysiege (@liztilley84),1,sydneysiege-all-rnr-threads,1
 544300256981430272,Muslim extremists are always so open to reason and negotiation. This should end well. #sydneysiege,0,sydneysiege-all-rnr-threads,0
 544301012492632064,"MASSIVE OPERATION: ""Hundreds of armed police have swarmed the area."" #sydneysiege (LIVE) http://t.co/uq626Z2Sfu http://t.co/oKLjdaWVAk",0,sydneysiege-all-rnr-threads,0
@@ -211,7 +211,7 @@ id,text,label,event,pred_label
 544327278469988352,"LIVE: ""People panicking; told to stay indoors when everyone wants to return home"" http://t.co/HakhsRG4R6 #sydneysiege http://t.co/9KHn2Lbt3E",0,sydneysiege-all-rnr-threads,1
 544332847050670080,The silence you hear is 1 500 000 000 Muslims not renouncing this terror attack.   #sydneysiege,0,sydneysiege-all-rnr-threads,0
 544333172180537344,Sydney Opera House among buildings evacuated due to #SydneySiege: http://t.co/xQtgKojdnC http://t.co/LPOz3sxOI7,1,sydneysiege-all-rnr-threads,1
-544333764814323713,"Gunman's headband reads  ""We are your soldiers O Muhammad"". #MartinPlace #SydneySiege http://t.co/ggUgP4kV9c",1,sydneysiege-all-rnr-threads,0
+544333764814323713,"Gunman's headband reads  ""We are your soldiers O Muhammad"". #MartinPlace #SydneySiege http://t.co/ggUgP4kV9c",1,sydneysiege-all-rnr-threads,1
 544340091615715329,hostages in Sydney right now... my thoughts and prayers are with you guys.   so much hatred in the world. this isn't the way.. #sydneysiege,1,sydneysiege-all-rnr-threads,0
 544341194822520832,"""The situation in sydney must be hard for 5sos""  No the situation in sydney must be hard for the innocent people that are being held hostage",1,sydneysiege-all-rnr-threads,0
 544341406094213121,Deserted grounds of the evacuated #Sydney Opera House - More on our LIVE page: http://t.co/VaKt3ZpRZR #sydneysiege http://t.co/pKWvDgpOle,1,sydneysiege-all-rnr-threads,0
@@ -235,7 +235,7 @@ id,text,label,event,pred_label
 544401468875616257,BREAKING: Five have now escaped a hostage situation at a cafe in downtown Sydney #sydneysiege http://t.co/gl30dy8PYN http://t.co/7oYbXnAeKV,1,sydneysiege-all-rnr-threads,1
 544412767240085504,"#sydneysiege gunman was reportedly ""extremely agitated""  shouting as some hostages escaped. http://t.co/R2a17pDaN8 http://t.co/7G01BcQUPL",0,sydneysiege-all-rnr-threads,1
 544413195884974080,It's things like #IllRideWithYou that keep us from completely losing our faith in humanity. #SydneySiege,0,sydneysiege-all-rnr-threads,0
-544415105358643200,#Sydneysiege authorities request media to show restraint. not give out details of even gunman's demands or operations (worth emulating),0,sydneysiege-all-rnr-threads,0
+544415105358643200,#Sydneysiege authorities request media to show restraint. not give out details of even gunman's demands or operations (worth emulating),0,sydneysiege-all-rnr-threads,1
 544425494763302913,Aussies tweet #Illridewithyou to Muslims who might be scared to travel alone #sydneysiege http://t.co/iwtT6J72Sj http://t.co/vaNOO5rnDD,0,sydneysiege-all-rnr-threads,0
 544425928290750464,"#SydneySiege ""We are only dealing with one location"" says police chief  responding to rumours of bombs elsewhere http://t.co/3shTK9yYOh",1,sydneysiege-all-rnr-threads,1
 544427216516698113,My prayers go out to everyone who's involved in the disaster in Sydney  hope everyone will get out safe!,0,sydneysiege-all-rnr-threads,0
@@ -249,28 +249,28 @@ id,text,label,event,pred_label
 544458083129229312,3 men have arrived at Queens Square to pray for the safe release of the hostages in Martin Place  Sydney. http://t.co/1cnQCzxYg1,0,sydneysiege-all-rnr-threads,1
 544458445764968448,hope they'll be safe. I'm at the opposite of the world but I'll pray for you  Sydney #illridewithyou #PrayForSydney http://t.co/VEcdVkGnRP,0,sydneysiege-all-rnr-threads,0
 544467005655748608,Praying for the people kept hostage in Lindt cafe Sydney 🙏,0,sydneysiege-all-rnr-threads,1
-544467919003213824,Page one of Tuesday's Sydney Morning Herald  first edition. #sydneysiege http://t.co/qpw9Jtvvtb,0,sydneysiege-all-rnr-threads,0
+544467919003213824,Page one of Tuesday's Sydney Morning Herald  first edition. #sydneysiege http://t.co/qpw9Jtvvtb,0,sydneysiege-all-rnr-threads,1
 544469768745398272,you don't realise what a privilege it is to be sleeping comfortably in your own bed until such horrific things are happening #sydneysiege,0,sydneysiege-all-rnr-threads,0
 544492843499540480,BREAKING: Now free to confirm that radical cleric Sheikh Man Monis has been named as gunman behind #SydneySiege. http://t.co/siHXBFN6RS,1,sydneysiege-all-rnr-threads,1
 544494273924562944,Australians start #illridewithyou campaign to support #Muslims. #Sydney #SydneySiege #SydneyHostageCrisis @Habibies http://t.co/BbYQZRjsU4,0,sydneysiege-all-rnr-threads,0
-544494312206000128,Instead of calling the Sydney cafe terrorist 'the terrorist' BBC is calling him 'the gunman'. Even after he showed his black terrorist flag.,0,sydneysiege-all-rnr-threads,0
+544494312206000128,Instead of calling the Sydney cafe terrorist 'the terrorist' BBC is calling him 'the gunman'. Even after he showed his black terrorist flag.,0,sydneysiege-all-rnr-threads,1
 544499780479893504,A Muslim lady took off her scarf out of fear after the Sydney Siege &amp; is comforted by strangers. #illridewithyou http://t.co/JJbPhn0YKh,0,sydneysiege-all-rnr-threads,0
 544503425082613761,The man believed to be holding hostages in Sydney is Man Haron Monis  known as Sheikh Haron  source says http://t.co/6T7xVdcwdD,0,sydneysiege-all-rnr-threads,1
 544503881527742464,Suspected jihadist in #Sydney standoff ID'd as Iranian sex offender as ordeal enters 15th hour http://t.co/WrPVZSJHlX http://t.co/dJuzEHM1hX,0,sydneysiege-all-rnr-threads,0
 544511112654618624,#BREAKING: Heavily armed police look to be storming the Lindt Café. #SydneySiege #9News,1,sydneysiege-all-rnr-threads,1
 544511130249744384,#sydneysiege: A series of loud blasts and bursts of ammunition have been heard at the cafe. http://t.co/IxPuyIrNy2 http://t.co/olteaN8zjH,1,sydneysiege-all-rnr-threads,1
-544511151900753921,#BREAKING: Police have stormed the Lindt Chocolate Cafe in Martin Place #sydneysiege #ABCNews24,1,sydneysiege-all-rnr-threads,0
+544511151900753921,#BREAKING: Police have stormed the Lindt Chocolate Cafe in Martin Place #sydneysiege #ABCNews24,1,sydneysiege-all-rnr-threads,1
 544512078518968320,A siege in Sydney suggests a new trend in jihadist violence may have reached Australia http://t.co/fMasqw90y7 http://t.co/bXBgoavJ2s,0,sydneysiege-all-rnr-threads,0
 544512108885725184,Paramedics are currently carrying out a number of hostages in #MartinPl. #SydneySiege #9News,1,sydneysiege-all-rnr-threads,1
 544512187171995649,Young woman carried out with blood running down her left leg. #sydneysiege,1,sydneysiege-all-rnr-threads,0
 544515584931528704,To recap: police used flash bang grenades  went in shooting.  At least one female hostage has been shot. #sydneysiege,1,sydneysiege-all-rnr-threads,1
 544515971637968898,US soccer has a new First Couple: USWNT's Sydney Leroux &amp; KC's Dom Dwyer (22 goals in '14) http://t.co/qlX3bOQHEc (via @sydneyleroux),0,sydneysiege-all-rnr-threads,0
-544515999161393152,Still no information about hostage taker: unclear if alive  injured or killed http://t.co/40E5foRpZ8 #sydneysiege http://t.co/XoF7h8Mxka,1,sydneysiege-all-rnr-threads,0
+544515999161393152,Still no information about hostage taker: unclear if alive  injured or killed http://t.co/40E5foRpZ8 #sydneysiege http://t.co/XoF7h8Mxka,1,sydneysiege-all-rnr-threads,1
 544518036255150080,Photos  video and live updates from the #Sydneysiege  where hostages have been held in cafe: http://t.co/DjpBDo9Rhv http://t.co/lJZVbVhDxD,0,sydneysiege-all-rnr-threads,1
 544518337498058753,Sydney siege is over. More details to follow.,0,sydneysiege-all-rnr-threads,0
 544518445870497793,BREAKING: #SydneySiege ends after 16 hours  police reportedly used live ammunition  number of wounded unconfirmed http://t.co/mr5MqLVF8q,0,sydneysiege-all-rnr-threads,1
 544520654431981568,Sad end: 2 people are dead  3 in serious condition after hostage siege at Sydney cafe  according to Australian broadcaster ABC. #sydneysiege,1,sydneysiege-all-rnr-threads,1
-544520990538358784,MORE: Police say hostage situation in Sydney is over after a swarm of heavily armed police storm downtown cafe: http://t.co/Tn8BlZvwmp,0,sydneysiege-all-rnr-threads,1
+544520990538358784,MORE: Police say hostage situation in Sydney is over after a swarm of heavily armed police storm downtown cafe: http://t.co/Tn8BlZvwmp,0,sydneysiege-all-rnr-threads,0
 544521788777304064,Watch gunfire erupt and hostages flee chocolate shop as #SydneySiege ends http://t.co/Ju5h01y3R4 http://t.co/Oq3E9dhsOA,0,sydneysiege-all-rnr-threads,1
 580321372703985664,MORE: Airbus #A320 was lost from Flightradar24 at 6800 feet at 09.39 UTC time #GermanWings http://t.co/WKhAjiH6pQ http://t.co/n4vTej13ff,1,germanwings-crash-all-rnr-threads,1
 580322066374721537,German Wings Airbus A320 #4U9525 lost from @Flightradar24 at 6800 ft at 09.39 UTC time UPDATES http://t.co/XTMaa9mAV2 http://t.co/VwZmbhcUsn,1,germanwings-crash-all-rnr-threads,1
@@ -280,12 +280,12 @@ id,text,label,event,pred_label
 580326473803767808,#BREAKING: Germanwings jetliner has crashed in Southeastern France  according to officials. All 148 on board are feared dead.,1,germanwings-crash-all-rnr-threads,1
 580328582993616896,A320 search &amp; rescue teams are said to be heading to the crash site at Méolans-Revel in the French Alps #Germanwings http://t.co/gkBze2MTkx,0,germanwings-crash-all-rnr-threads,0
 580328708675887104,DETAILS: #Germanwings Airbus #A320 crashes near small town of #Barcelonnette in Alpes-de-Haute-Provence #4U9525 http://t.co/zU6hn03xzU,0,germanwings-crash-all-rnr-threads,0
-580329219646988289,Last position of the #GermanWings Airbus A320 passenger jet that crashed in the French Alps http://t.co/8UPMsinQkX http://t.co/K3etnEPmxk,0,germanwings-crash-all-rnr-threads,0
+580329219646988289,Last position of the #GermanWings Airbus A320 passenger jet that crashed in the French Alps http://t.co/8UPMsinQkX http://t.co/K3etnEPmxk,0,germanwings-crash-all-rnr-threads,1
 580331121180844032,#4U9525: #Hollande expresses his solidarity to families of #Germanwings crash victims http://t.co/XTMaa9mAV2 http://t.co/LwWifZXb5X,0,germanwings-crash-all-rnr-threads,0
 580331453889708032,ALERT Photo: Germanwings crash plane 'lost signal at 6 800 feet ' flight radar shows - @itvnews http://t.co/m358Qc2Na1,1,germanwings-crash-all-rnr-threads,1
 580332189155459072,France's Interior Ministry says debris located at 2 000 meters altitude in French Alps. #Airbus #A320 #GermanWings,0,germanwings-crash-all-rnr-threads,0
 580335608477982720,Germanwings  flight 4U9525 crashes in French Alps: a 'dark day' for Lufthansa if #4U9525 fears realised - live http://t.co/9la7dYRcUz,0,germanwings-crash-all-rnr-threads,0
-580336326634962944,French PM says he fears those aboard the #Germanwings Airbus A320 jetliner may be dead. http://t.co/AJji9cN1w2 https://t.co/8q1zCYZhN5,0,germanwings-crash-all-rnr-threads,0
+580336326634962944,French PM says he fears those aboard the #Germanwings Airbus A320 jetliner may be dead. http://t.co/AJji9cN1w2 https://t.co/8q1zCYZhN5,0,germanwings-crash-all-rnr-threads,1
 580336341080260608,“If our fears are confirmed  this is a dark day for Lufthansa ” says CEO of Germanwings' parent company after crash http://t.co/tJVCCJSY4G,0,germanwings-crash-all-rnr-threads,0
 580341214098137089,Family and Friends of flight #4U9525 will be in my prayers. May God take care.,0,germanwings-crash-all-rnr-threads,0
 580346835295997952,IMPORTANT: INFORMATION TELEPHONE FOR RELATIVES OF #A320  TF 00 49 80 011 33 55 77 @germanwings,0,germanwings-crash-all-rnr-threads,0

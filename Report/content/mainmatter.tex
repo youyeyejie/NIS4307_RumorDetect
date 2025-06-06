@@ -109,7 +109,7 @@ from collections import Counter
 import re
 import joblib
 import matplotlib.pyplot as plt
-from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix, classification_report
+from sklearn.metrics import precision_score, recall_score, f1_score
 import numpy as np
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
@@ -134,13 +134,13 @@ DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 # 路径设置
 model_parameter = f'{EMBEDDING_DIM}_{HIDDEN_DIM}_{EPOCHS}_{LEARNING_RATE}'
 model_path = f'../Output/Model/{model_parameter}.pt'
-vocab_path = f'../Output/Model/vocab_{model_parameter}.pkl'
+vocab_path = f'../Output/Vocab/{model_parameter}.pkl'
 train_path = '../Dataset/split/train.csv'
 ex_train_path = '../Dataset/split/ex_train.csv'
-val_path = '../dataset/split/val.csv'
-ex_val_path = '../dataset/split/ex_val.csv'
-test_path = '../dataset/test/test.csv'
-graph_path = f'../Output/Graph/{model_parameter}.png'
+val_path = '../Dataset/split/val.csv'
+ex_val_path = '../Dataset/split/ex_val.csv'
+test_path = '../Dataset/test/test.csv'
+diagram_path = f'../Output/Diagram/{model_parameter}.png'
 
 def tokenize(text):
     """对文本进行分词和预处理"""
@@ -260,7 +260,7 @@ def main():
         print(f'Val: Loss={val_loss:.4f}, Acc={val_acc:.4f}, Prec={val_prec:.4f}, Rec={val_rec:.4f}, F1={val_f1:.4f}')
         print('-' * 60)
     print("\n 训练完成!")
-    plot_learning_curve(train_history, val_history, EPOCHS, graph_path)
+    plot_learning_curve(train_history, val_history, EPOCHS, diagram_path)
     
 if __name__ == '__main__':
     main()
@@ -292,7 +292,7 @@ class RumourDetectClass:
         learning_rate = LEARNING_RATE
         device = DEVICE
         model_path = f'../Output/Model/best_{embedding_dim}_{hidden_dim}_{epochs}_{learning_rate}.pt'
-        vocab_path = f'../Output/Model/vocab_{embedding_dim}_{hidden_dim}_{epochs}_{learning_rate}.pkl'
+        vocab_path = f'../Output/Vocab/{embedding_dim}_{hidden_dim}_{epochs}_{learning_rate}.pkl'
         return cls(model_path, vocab_path, embedding_dim, hidden_dim, device)
 
     
@@ -330,7 +330,7 @@ class RumourDetectClass:
 \vspace{-0.2cm}
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.8\textwidth]{../Output/Graph/best_128_256_30_0.009.png}
+  \includegraphics[width=0.8\textwidth]{../Output/Diagram/best_128_256_30_0.009.png}
   \caption{模型训练过程中的损失率和核心指标的双图学习曲线}
   \label{fig:learning_curve}
 \end{figure}

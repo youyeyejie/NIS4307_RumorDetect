@@ -7,7 +7,7 @@ from collections import Counter
 import re
 import joblib
 import matplotlib.pyplot as plt
-from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix, classification_report
+from sklearn.metrics import precision_score, recall_score, f1_score
 import numpy as np
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
@@ -39,13 +39,13 @@ DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')  # 设�
 # embedding_dim hidden_dim epochs learning_rate
 model_parameter = f'{EMBEDDING_DIM}_{HIDDEN_DIM}_{EPOCHS}_{LEARNING_RATE}'
 model_path = f'../Output/Model/{model_parameter}.pt'
-vocab_path = f'../Output/Model/vocab_{model_parameter}.pkl'
+vocab_path = f'../Output/Vocab/{model_parameter}.pkl'
 train_path = '../Dataset/split/train.csv'
 ex_train_path = '../Dataset/split/ex_train.csv'  # 新增训练集1
-val_path = '../dataset/split/val.csv'
-ex_val_path = '../dataset/split/ex_val.csv'
-test_path = '../dataset/test/test.csv'
-graph_path = f'../Output/Graph/{model_parameter}.png'
+val_path = '../Dataset/split/val.csv'
+ex_val_path = '../Dataset/split/ex_val.csv'
+test_path = '../Dataset/test/test.csv'
+diagram_path = f'../Output/Diagram/{model_parameter}.png'
 
 # 简单分词器
 # def tokenize(text):
@@ -261,7 +261,7 @@ def main():
     minutes, seconds = divmod(total_seconds, 60)
     print(f"总训练时间: {minutes}分{seconds}秒")
     # 绘制学习曲线
-    plot_learning_curve(train_history, val_history, EPOCHS, graph_path)
+    plot_learning_curve(train_history, val_history, EPOCHS, diagram_path)
     
 if __name__ == '__main__':
     main()

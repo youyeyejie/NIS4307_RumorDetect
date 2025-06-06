@@ -16,7 +16,7 @@ class RumourDetectClass:
         learning_rate = LEARNING_RATE
         device = DEVICE
         model_path = f'../Output/Model/best_{embedding_dim}_{hidden_dim}_{epochs}_{learning_rate}.pt'
-        vocab_path = f'../Output/Model/vocab_{embedding_dim}_{hidden_dim}_{epochs}_{learning_rate}.pkl'
+        vocab_path = f'../Output/Vocab/{embedding_dim}_{hidden_dim}_{epochs}_{learning_rate}.pkl'
         return cls(model_path, vocab_path, embedding_dim, hidden_dim, device)
 
     def classify(self, text: str) -> int:
